@@ -7,4 +7,7 @@ Objetos de tipo Textbox, Boton, de la forma PascalCase: TxtNombre, BtnAgregar, e
 ## Nombramiento para componentes menos usados
 
 Radial Buttons: RbtOpcion
+
 CheckBoxList: ChkList
+
+ToolStripMenu: ToolStpMenuX
