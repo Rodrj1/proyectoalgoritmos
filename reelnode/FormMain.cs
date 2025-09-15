@@ -52,14 +52,14 @@ namespace ProjectoNuevo
 
             login.ShowDialog();
 
-            ToolStpMenuAdmin.Visible = Utils.usuarioActual.RolUsuario == "Admin" ? true : false;
+            ToolStpMenuAdmin.Visible = UtilsBD.usuarioActual.RolUsuario == "Admin" ? true : false;
         }
 
         private void CargarUsuarios()
         {
             string ruta = Path.Combine(Application.StartupPath, "personas.json");
             string json = File.ReadAllText(ruta);
-            Utils.usuariosRegistrados = JsonSerializer.Deserialize<List<Usuario>>(json);
+            UtilsBD.usuariosRegistrados = JsonSerializer.Deserialize<List<Usuario>>(json);
         }
 
     }

@@ -11,6 +11,10 @@ namespace ProjectoNuevo
     {
         public static ConexionBD Conexion = new ConexionBD();
 
+        public static Usuario usuarioActual = new Usuario();
+        public static List<Usuario> usuariosRegistrados = new List<Usuario>();
+        public static List<Pelicula> peliculasCargadas = new List<Pelicula>();
+
         public static void RegistrarUsuarioBD(Usuario nuevoUsuario)
         {
             string query = @"
@@ -28,7 +32,25 @@ namespace ProjectoNuevo
 
                 cmd.ExecuteNonQuery();
 
-                Utils.usuariosRegistrados.Add(nuevoUsuario);
+                usuariosRegistrados.Add(nuevoUsuario);
+            }
+        }
+
+        public static void InsertarPeliculaBD(Pelicula nuevaPelicula)
+        {
+            string query = @"
+            INSERT INTO peliculas (nombre, fecha_estreno, descripcion, director, imagen, duracion) 
+            VALUES (@nombre, @fecha_estreno, @descripcion, @director, @imagen, @duracion);";
+            using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@nombre", nuevaPelicula.Nombre);
+                cmd.Parameters.AddWithValue("@fecha_estreno", nuevaPelicula.FechaEstreno);
+                cmd.Parameters.AddWithValue("@descripcion", nuevaPelicula.Descripcion);
+                cmd.Parameters.AddWithValue("@director", nuevaPelicula.Director);
+                cmd.Parameters.AddWithValue("@imagen", nuevaPelicula.Imagen);
+                cmd.Parameters.AddWithValue("@duracion", nuevaPelicula.Duracion);
+                cmd.ExecuteNonQuery();
+                peliculasCargadas.Add(nuevaPelicula);
             }
         }
 
@@ -70,7 +92,7 @@ namespace ProjectoNuevo
                             Email = reader.GetString("email_usuario"),
                             RolUsuario = reader.GetString("nombre_rol")
                         };
-                        Utils.usuariosRegistrados.Add(u);
+                        usuariosRegistrados.Add(u);
                     }
                 }
             }

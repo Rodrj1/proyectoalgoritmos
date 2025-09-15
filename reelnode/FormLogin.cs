@@ -53,14 +53,14 @@ namespace ProjectoNuevo
         private void BtnIngresar_Click_1(object sender, EventArgs e)
         {
             bool usuarioEncontrado = false;
-            foreach(Usuario u in Utils.usuariosRegistrados)
+            foreach(Usuario u in UtilsBD.usuariosRegistrados)
             {
                 if (TxtUsuario.Text == u.NombreUsuario && TxtPassword.Text == u.Password)
                 {
-                    Utils.usuarioActual.NombreUsuario = u.NombreUsuario;
-                    Utils.usuarioActual.Password = u.Password;
-                    Utils.usuarioActual.RolUsuario = u.RolUsuario;
-                    Utils.usuarioActual.Email = u.Email;
+                    UtilsBD.usuarioActual.NombreUsuario = u.NombreUsuario;
+                    UtilsBD.usuarioActual.Password = u.Password;
+                    UtilsBD.usuarioActual.RolUsuario = u.RolUsuario;
+                    UtilsBD.usuarioActual.Email = u.Email;
                     usuarioEncontrado = true;
                     this.Close();
                     break;
