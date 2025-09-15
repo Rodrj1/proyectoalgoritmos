@@ -110,6 +110,7 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(296, 22);
             this.TxtEmail.TabIndex = 12;
+            this.TxtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
             // PanelPassword
             // 
@@ -155,6 +156,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(296, 22);
             this.TxtPassword.TabIndex = 12;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // PanelUsuario
             // 
@@ -200,6 +202,7 @@
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(296, 22);
             this.TxtUsuario.TabIndex = 12;
+            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // BtnIngresar
             // 
@@ -240,6 +243,7 @@
             this.ClientSize = new System.Drawing.Size(434, 450);
             this.Controls.Add(this.panel1);
             this.Name = "FormRegistrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegistrar";
             this.Load += new System.EventHandler(this.FormRegistrar_Load);
             this.panel1.ResumeLayout(false);

@@ -137,6 +137,7 @@
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="UtilsBD.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

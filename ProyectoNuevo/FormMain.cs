@@ -38,6 +38,7 @@ namespace ProjectoNuevo
 
         private void ToolStpMenuAdmin_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             FormAdmin ventana = new FormAdmin();
 
             ventana.ShowDialog();
@@ -45,41 +46,13 @@ namespace ProjectoNuevo
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            Utils.Conexion.AbrirBD();
+            UtilsBD.CargarUsuario();
 
-            string query = 
-                "select " +
-                "u.nombre_usuario, " +
-                "u.password_usuario, " +
-                "u.email_usuario, " +
-                "r.nombre as nombre_rol\r\n" +
-                "from usuarios u\r\n" +
-                "inner join rol r on r.id_rol = u.id_rol;";
-
-            using (MySqlCommand cmd = new MySqlCommand(query, Utils.Conexion.GetConnection()))
-            {
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Usuario u = new Usuario()
-                        {
-                            NombreUsuario = reader.GetString("nombre_usuario"),
-                            Password = reader.GetString("password_usuario"),
-                            Email = reader.GetString("email_usuario"),
-                            RolUsuario = reader.GetString("nombre_rol")
-                        };
-                        Utils.usuariosRegistrados.Add(u);
-                    }
-                }
-            }
-            /*CargarUsuarios();*/
             FormLogin login = new FormLogin();
 
             login.ShowDialog();
 
             ToolStpMenuAdmin.Visible = Utils.usuarioActual.RolUsuario == "Admin" ? true : false;
-
         }
 
         private void CargarUsuarios()

@@ -35,6 +35,7 @@
             this.PanelUsuarioLinea = new System.Windows.Forms.Panel();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.LblRegistrar = new System.Windows.Forms.Label();
             this.PanelPassword = new System.Windows.Forms.Panel();
             this.LblPanelPassword = new System.Windows.Forms.Label();
@@ -113,6 +114,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(104)))), ((int)(((byte)(124)))));
+            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.LblRegistrar);
             this.panel1.Controls.Add(this.PanelPassword);
             this.panel1.Controls.Add(this.PanelUsuario);
@@ -123,6 +125,21 @@
             this.panel1.Size = new System.Drawing.Size(424, 447);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.White;
+            this.BtnSalir.Location = new System.Drawing.Point(126, 380);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(154, 38);
+            this.BtnSalir.TabIndex = 25;
+            this.BtnSalir.Text = "S   A   L   I   R";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click_1);
             // 
             // LblRegistrar
             // 
@@ -208,6 +225,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(184)))), ((int)(((byte)(182)))));
             this.ClientSize = new System.Drawing.Size(448, 487);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormLogin_Load);
@@ -238,5 +258,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label LblRegistrar;
+        private System.Windows.Forms.Button BtnSalir;
     }
 }

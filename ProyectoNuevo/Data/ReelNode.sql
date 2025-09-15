@@ -69,7 +69,9 @@ CREATE TABLE usuarios (
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
 );
 insert into usuarios (nombre_usuario, password_usuario, email_usuario, id_rol)
-values("admin", "123", "admin@gmail.com", 1);
+values("admin", "123", "admin@gmail.com", 1),
+("agustina", "123", "sanferdez@gmail.com", 1),
+("santiago", "123", "agusbarbaresi@gmail.com", 1);
 
 select u.nombre_usuario, u.password_usuario, u.email_usuario, r.nombre as nombre_rol
 from usuarios u

@@ -46,7 +46,7 @@ namespace ProjectoNuevo
         private void FormLogin_Load(object sender, EventArgs e)
         {
             BtnIngresar.FlatAppearance.BorderColor = Color.FromArgb(0, 29, 35);
-
+            BtnSalir.FlatAppearance.BorderColor = Color.FromArgb(0, 29, 35);
         }
 
 
@@ -108,6 +108,10 @@ namespace ProjectoNuevo
             FormRegistrar registro = new FormRegistrar();
 
             registro.Show();
+        }
+        private void BtnSalir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

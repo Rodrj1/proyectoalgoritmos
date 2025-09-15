@@ -12,7 +12,6 @@ namespace ProjectoNuevo
 {
     public static class Utils
     {
-        public static ConexionBD Conexion = new ConexionBD();
         public static List<Usuario> usuariosRegistrados = new List<Usuario>();
         public static Usuario usuarioActual = new Usuario("", "", "Usuario", "admin@gmail.com");
     }

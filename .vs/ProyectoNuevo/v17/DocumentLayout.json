@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|d:\\rodrigo\\algoritmos2\\proyectonuevo\\proyectonuevo\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|d:\\rodrigo\\algoritmos2\\proyectonuevo\\proyectonuevo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|d:\\rodrigo\\algoritmos2\\proyectonuevo\\proyectonuevo\\formregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\formregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\proyectonuevo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|d:\\rodrigo\\algoritmos2\\proyectonuevo\\proyectonuevo\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\proyectonuevo\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\proyectonuevo\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|ProyectoNuevo\\ProyectoNuevo.csproj|solutionrelative:proyectonuevo\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,37 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormLogin.cs",
-              "RelativeDocumentMoniker": "ProyectoNuevo\\FormLogin.cs",
-              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoNuevo\\FormLogin.cs [Dise\u00F1o]",
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormMain.cs",
+              "RelativeDocumentMoniker": "ProyectoNuevo\\FormMain.cs",
+              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormMain.cs",
+              "RelativeToolTip": "ProyectoNuevo\\FormMain.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwCgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T13:17:53.736Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-09-15T14:09:56.049Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormRegistrar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormRegistrar.cs",
-              "RelativeDocumentMoniker": "ProyectoNuevo\\FormRegistrar.cs",
-              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormRegistrar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoNuevo\\FormRegistrar.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\Utils.cs",
+              "RelativeDocumentMoniker": "ProyectoNuevo\\Utils.cs",
+              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\Utils.cs",
+              "RelativeToolTip": "ProyectoNuevo\\Utils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T13:17:52.548Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-09-15T14:01:31.596Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "ProyectoNuevo\\FormAdmin.cs",
-              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ProyectoNuevo\\FormAdmin.cs [Dise\u00F1o]",
+              "Title": "UtilsBD.cs",
+              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\UtilsBD.cs",
+              "RelativeDocumentMoniker": "ProyectoNuevo\\UtilsBD.cs",
+              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\UtilsBD.cs",
+              "RelativeToolTip": "ProyectoNuevo\\UtilsBD.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T13:17:37.722Z",
+              "WhenOpened": "2025-09-15T14:02:59.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormMain.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormMain.cs",
+              "RelativeDocumentMoniker": "ProyectoNuevo\\FormMain.cs",
+              "ToolTip": "D:\\Rodrigo\\Algoritmos2\\ProyectoNuevo\\ProyectoNuevo\\FormMain.cs [Dise\u00F1o]",
+              "RelativeToolTip": "ProyectoNuevo\\FormMain.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T14:04:57.329Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

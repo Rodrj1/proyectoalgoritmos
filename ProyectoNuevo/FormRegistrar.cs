@@ -76,7 +76,7 @@ namespace ProjectoNuevo
             INSERT INTO usuarios (nombre_usuario, password_usuario, email_usuario, id_rol) 
             VALUES (@nombre, @password, @email, @rol);";
 
-            using (MySqlCommand cmd = new MySqlCommand(query, Utils.Conexion.GetConnection()))
+            using (MySqlCommand cmd = new MySqlCommand(query, UtilsBD.Conexion.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@nombre", nuevoUsuario.NombreUsuario);
                 cmd.Parameters.AddWithValue("@password", nuevoUsuario.Password);
@@ -91,7 +91,49 @@ namespace ProjectoNuevo
 
         private void FormRegistrar_Load(object sender, EventArgs e)
         {
+            BtnIngresar.FlatAppearance.BorderColor = Color.FromArgb(0, 29, 35);
+        }
 
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtUsuario.Text != "")
+            {
+                PanelUsuarioLinea.Visible = false;
+                LblPanelUsuario.Visible = false;
+            }
+            else
+            {
+                PanelUsuarioLinea.Visible = true;
+                LblPanelUsuario.Visible = true;
+            }
+        }
+
+        private void TxtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtEmail.Text != "")
+            {
+                PanelEmailLinea.Visible = false;
+                LblPanelEmail.Visible = false;
+            }
+            else
+            {
+                PanelEmailLinea.Visible = true;
+                LblPanelEmail.Visible = true;
+            }
+        }
+
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtPassword.Text != "")
+            {
+                PanelPasswordLinea.Visible = false;
+                LblPanelPassword.Visible = false;
+            }
+            else
+            {
+                PanelPasswordLinea.Visible = true;
+                LblPanelPassword.Visible = true;
+            }
         }
     }
 }
