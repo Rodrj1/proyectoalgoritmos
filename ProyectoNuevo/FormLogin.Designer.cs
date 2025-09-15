@@ -56,9 +56,10 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(55, 322);
+            this.BtnIngresar.Location = new System.Drawing.Point(73, 396);
+            this.BtnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(307, 52);
+            this.BtnIngresar.Size = new System.Drawing.Size(409, 64);
             this.BtnIngresar.TabIndex = 13;
             this.BtnIngresar.Text = "I  N  G  R  E  S  A  R";
             this.BtnIngresar.UseVisualStyleBackColor = false;
@@ -70,10 +71,11 @@
             this.PanelUsuario.Controls.Add(this.LblPanelUsuario);
             this.PanelUsuario.Controls.Add(this.PanelUsuarioLinea);
             this.PanelUsuario.Controls.Add(this.TxtUsuario);
-            this.PanelUsuario.Location = new System.Drawing.Point(55, 165);
+            this.PanelUsuario.Location = new System.Drawing.Point(73, 203);
+            this.PanelUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelUsuario.Name = "PanelUsuario";
-            this.PanelUsuario.Padding = new System.Windows.Forms.Padding(5);
-            this.PanelUsuario.Size = new System.Drawing.Size(306, 35);
+            this.PanelUsuario.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.PanelUsuario.Size = new System.Drawing.Size(408, 43);
             this.PanelUsuario.TabIndex = 18;
             // 
             // LblPanelUsuario
@@ -83,18 +85,20 @@
             this.LblPanelUsuario.Enabled = false;
             this.LblPanelUsuario.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelUsuario.ForeColor = System.Drawing.Color.White;
-            this.LblPanelUsuario.Location = new System.Drawing.Point(8, 5);
+            this.LblPanelUsuario.Location = new System.Drawing.Point(11, 6);
+            this.LblPanelUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPanelUsuario.Name = "LblPanelUsuario";
-            this.LblPanelUsuario.Size = new System.Drawing.Size(50, 17);
+            this.LblPanelUsuario.Size = new System.Drawing.Size(67, 21);
             this.LblPanelUsuario.TabIndex = 21;
             this.LblPanelUsuario.Text = "Usuario";
             // 
             // PanelUsuarioLinea
             // 
             this.PanelUsuarioLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(184)))), ((int)(((byte)(182)))));
-            this.PanelUsuarioLinea.Location = new System.Drawing.Point(8, 25);
+            this.PanelUsuarioLinea.Location = new System.Drawing.Point(11, 31);
+            this.PanelUsuarioLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelUsuarioLinea.Name = "PanelUsuarioLinea";
-            this.PanelUsuarioLinea.Size = new System.Drawing.Size(291, 2);
+            this.PanelUsuarioLinea.Size = new System.Drawing.Size(388, 2);
             this.PanelUsuarioLinea.TabIndex = 20;
             // 
             // TxtUsuario
@@ -104,9 +108,10 @@
             this.TxtUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.White;
-            this.TxtUsuario.Location = new System.Drawing.Point(5, 5);
+            this.TxtUsuario.Location = new System.Drawing.Point(7, 6);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(296, 22);
+            this.TxtUsuario.Size = new System.Drawing.Size(394, 27);
             this.TxtUsuario.TabIndex = 12;
             this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
@@ -118,9 +123,10 @@
             this.panel1.Controls.Add(this.PanelUsuario);
             this.panel1.Controls.Add(this.BtnIngresar);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 447);
+            this.panel1.Size = new System.Drawing.Size(565, 550);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -131,9 +137,10 @@
             this.LblRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LblRegistrar.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblRegistrar.ForeColor = System.Drawing.Color.Turquoise;
-            this.LblRegistrar.Location = new System.Drawing.Point(98, 275);
+            this.LblRegistrar.Location = new System.Drawing.Point(131, 338);
+            this.LblRegistrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblRegistrar.Name = "LblRegistrar";
-            this.LblRegistrar.Size = new System.Drawing.Size(206, 18);
+            this.LblRegistrar.Size = new System.Drawing.Size(265, 23);
             this.LblRegistrar.TabIndex = 24;
             this.LblRegistrar.Text = "¿Usuario nuevo? Registrarse aquí";
             this.LblRegistrar.Click += new System.EventHandler(this.LblRegistrar_Click);
@@ -144,10 +151,11 @@
             this.PanelPassword.Controls.Add(this.LblPanelPassword);
             this.PanelPassword.Controls.Add(this.PanelPasswordLinea);
             this.PanelPassword.Controls.Add(this.TxtPassword);
-            this.PanelPassword.Location = new System.Drawing.Point(56, 227);
+            this.PanelPassword.Location = new System.Drawing.Point(75, 279);
+            this.PanelPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelPassword.Name = "PanelPassword";
-            this.PanelPassword.Padding = new System.Windows.Forms.Padding(5);
-            this.PanelPassword.Size = new System.Drawing.Size(306, 35);
+            this.PanelPassword.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.PanelPassword.Size = new System.Drawing.Size(408, 43);
             this.PanelPassword.TabIndex = 22;
             // 
             // LblPanelPassword
@@ -157,18 +165,20 @@
             this.LblPanelPassword.Enabled = false;
             this.LblPanelPassword.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPanelPassword.ForeColor = System.Drawing.Color.White;
-            this.LblPanelPassword.Location = new System.Drawing.Point(8, 5);
+            this.LblPanelPassword.Location = new System.Drawing.Point(11, 6);
+            this.LblPanelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPanelPassword.Name = "LblPanelPassword";
-            this.LblPanelPassword.Size = new System.Drawing.Size(70, 17);
+            this.LblPanelPassword.Size = new System.Drawing.Size(91, 21);
             this.LblPanelPassword.TabIndex = 21;
             this.LblPanelPassword.Text = "Contraseña";
             // 
             // PanelPasswordLinea
             // 
             this.PanelPasswordLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(184)))), ((int)(((byte)(182)))));
-            this.PanelPasswordLinea.Location = new System.Drawing.Point(8, 25);
+            this.PanelPasswordLinea.Location = new System.Drawing.Point(11, 31);
+            this.PanelPasswordLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelPasswordLinea.Name = "PanelPasswordLinea";
-            this.PanelPasswordLinea.Size = new System.Drawing.Size(291, 2);
+            this.PanelPasswordLinea.Size = new System.Drawing.Size(388, 2);
             this.PanelPasswordLinea.TabIndex = 20;
             // 
             // TxtPassword
@@ -178,9 +188,10 @@
             this.TxtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TxtPassword.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.Color.White;
-            this.TxtPassword.Location = new System.Drawing.Point(5, 5);
+            this.TxtPassword.Location = new System.Drawing.Point(7, 6);
+            this.TxtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(296, 22);
+            this.TxtPassword.Size = new System.Drawing.Size(394, 27);
             this.TxtPassword.TabIndex = 12;
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
@@ -190,9 +201,10 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::ProjectoNuevo.Properties.Resources.logo1;
             this.pictureBox1.InitialImage = global::ProjectoNuevo.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(503, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -203,11 +215,12 @@
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(184)))), ((int)(((byte)(182)))));
-            this.ClientSize = new System.Drawing.Size(448, 487);
+            this.ClientSize = new System.Drawing.Size(597, 599);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormLogin_Load);
