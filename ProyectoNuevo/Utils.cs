@@ -14,5 +14,6 @@ namespace ProjectoNuevo
     {
         public static List<Usuario> usuariosRegistrados = new List<Usuario>();
         public static Usuario usuarioActual = new Usuario("", "", "Usuario", "admin@gmail.com");
+        public static List<Pelicula> peliculas = new List<Pelicula>();
     }
 }

@@ -11,17 +11,33 @@ namespace ProjectoNuevo
     {
         public static ConexionBD Conexion = new ConexionBD();
 
+        public static void RegistrarUsuario(Usuario nuevoUsuario) 
+        {
+            string query = @"
+            INSERT INTO usuarios (nombre_usuario, password_usuario, email_usuario, id_rol) 
+            VALUES (@nombre, @password, @email, @rol);";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, UtilsBD.Conexion.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@nombre", nuevoUsuario.NombreUsuario);
+                cmd.Parameters.AddWithValue("@password", nuevoUsuario.Password);
+                cmd.Parameters.AddWithValue("@email", nuevoUsuario.Email);
+                cmd.Parameters.AddWithValue("@rol", nuevoUsuario.RolUsuario == "Admin" ? 1 : 2);
+
+                cmd.ExecuteNonQuery();
+
+                Utils.usuariosRegistrados.Add(nuevoUsuario);
+            }
+        }
         public static void CargarUsuario()
         {
             Conexion.AbrirBD();
 
             string query =
                 "SELECT " +
-                "u.nombre_usuario, " +
-                "u.password_usuario, " +
-                "u.email_usuario, " +
+                "u.nombre, " +
                 "r.nombre as nombre_rol\r\n" +
-                "FROM usuarios u\r\n" +
+                "FROM usuario u\r\n" +
                 "INNER JOIN rol r on r.id_rol = u.id_rol;";
 
             using (MySqlCommand cmd = new MySqlCommand(query, UtilsBD.Conexion.GetConnection()))

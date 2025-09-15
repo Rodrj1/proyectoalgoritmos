@@ -55,27 +55,14 @@ CREATE TABLE rol (
     nombre VARCHAR(100) NOT NULL
 );
 
-insert into rol(nombre)
-values("Admin"), ("Usuario");
-select * from rol;
-CREATE TABLE usuarios (
+CREATE TABLE usuario (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
-    nombre_usuario VARCHAR(255) NOT NULL,
-    password_usuario VARCHAR(255) not null,
-    email_usuario varchar(255) not null,
+    nombre VARCHAR(255) NOT NULL,
     avatar MEDIUMBLOB,
     fecha_registro DATE NOT NULL,
     id_rol INT,
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
 );
-insert into usuarios (nombre_usuario, password_usuario, email_usuario, id_rol)
-values("admin", "123", "admin@gmail.com", 1),
-("agustina", "123", "sanferdez@gmail.com", 1),
-("santiago", "123", "agusbarbaresi@gmail.com", 1);
-
-select u.nombre_usuario, u.password_usuario, u.email_usuario, r.nombre as nombre_rol
-from usuarios u
-inner join rol r on r.id_rol = u.id_rol;
 
 CREATE TABLE visualizaciones_serie (
     id_visualizacion INT PRIMARY KEY AUTO_INCREMENT,
@@ -113,9 +100,14 @@ create table comentarios_peli (
 );
 create table calificaciones_serie(
 	id_calificaciones int primary key auto_increment,
-    calificacion int
+    calificacion int,
+    id_serie int,
+    FOREIGN KEY (id_serie) REFERENCES serie(id_serie)
 );
 create table calificaciones_peliculas(
 	id_calificaciones int primary key auto_increment,
-    calificacion int
+    calificacion int,
+     id_pelicula int,
+    FOREIGN KEY (id_pelicula) REFERENCES peliculas(id_pelicula)
 );
+

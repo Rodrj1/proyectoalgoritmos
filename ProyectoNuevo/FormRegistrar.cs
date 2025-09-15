@@ -63,29 +63,10 @@ namespace ProjectoNuevo
                  File.WriteAllText(Path.Combine(Application.StartupPath, "personas.json"), toJSON);
                 */
 
-                RegistrarUsuarioBD(nuevo);
+                UtilsBD.RegistrarUsuario(nuevo);
                 MessageBox.Show("Usuario registrado con éxito", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
-            }
-        }
-
-        private void RegistrarUsuarioBD(Usuario nuevoUsuario) 
-        {
-            string query = @"
-            INSERT INTO usuarios (nombre_usuario, password_usuario, email_usuario, id_rol) 
-            VALUES (@nombre, @password, @email, @rol);";
-
-            using (MySqlCommand cmd = new MySqlCommand(query, UtilsBD.Conexion.GetConnection()))
-            {
-                cmd.Parameters.AddWithValue("@nombre", nuevoUsuario.NombreUsuario);
-                cmd.Parameters.AddWithValue("@password", nuevoUsuario.Password);
-                cmd.Parameters.AddWithValue("@email", nuevoUsuario.Email);
-                cmd.Parameters.AddWithValue("@rol", nuevoUsuario.RolUsuario == "Admin" ? 1 : 2);
-
-                cmd.ExecuteNonQuery();
-
-                Utils.usuariosRegistrados.Add(nuevoUsuario);
             }
         }
 

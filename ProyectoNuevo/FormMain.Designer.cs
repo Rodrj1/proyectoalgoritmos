@@ -31,9 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStpMenuArchivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStpMenuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStpMenuPeliculas = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStpMenuSeries = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -53,9 +50,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStpMenuArchivo,
-            this.ToolStpMenuUsuarios,
-            this.ToolStpMenuPeliculas,
-            this.ToolStpMenuSeries,
             this.ToolStpMenuAdmin});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -70,33 +64,12 @@
             this.ToolStpMenuArchivo.Size = new System.Drawing.Size(69, 22);
             this.ToolStpMenuArchivo.Text = "Archivo";
             // 
-            // ToolStpMenuUsuarios
-            // 
-            this.ToolStpMenuUsuarios.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStpMenuUsuarios.Name = "ToolStpMenuUsuarios";
-            this.ToolStpMenuUsuarios.Size = new System.Drawing.Size(74, 22);
-            this.ToolStpMenuUsuarios.Text = "Usuarios";
-            // 
-            // ToolStpMenuPeliculas
-            // 
-            this.ToolStpMenuPeliculas.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStpMenuPeliculas.Name = "ToolStpMenuPeliculas";
-            this.ToolStpMenuPeliculas.Size = new System.Drawing.Size(73, 22);
-            this.ToolStpMenuPeliculas.Text = "Peliculas";
-            // 
-            // ToolStpMenuSeries
-            // 
-            this.ToolStpMenuSeries.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStpMenuSeries.Name = "ToolStpMenuSeries";
-            this.ToolStpMenuSeries.Size = new System.Drawing.Size(55, 22);
-            this.ToolStpMenuSeries.Text = "Series";
-            // 
             // ToolStpMenuAdmin
             // 
             this.ToolStpMenuAdmin.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStpMenuAdmin.Name = "ToolStpMenuAdmin";
-            this.ToolStpMenuAdmin.Size = new System.Drawing.Size(62, 22);
-            this.ToolStpMenuAdmin.Text = "Admin";
+            this.ToolStpMenuAdmin.Size = new System.Drawing.Size(161, 22);
+            this.ToolStpMenuAdmin.Text = "Administrar Contenido";
             this.ToolStpMenuAdmin.Click += new System.EventHandler(this.ToolStpMenuAdmin_Click);
             // 
             // panel2
@@ -132,9 +105,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuArchivo;
-        private System.Windows.Forms.ToolStripMenuItem ToolStpMenuUsuarios;
-        private System.Windows.Forms.ToolStripMenuItem ToolStpMenuPeliculas;
-        private System.Windows.Forms.ToolStripMenuItem ToolStpMenuSeries;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuAdmin;
     }
