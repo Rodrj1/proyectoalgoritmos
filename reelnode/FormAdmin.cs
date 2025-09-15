@@ -18,33 +18,6 @@ namespace ProjectoNuevo
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            /*Rectangle rect = panel2.ClientRectangle;
-            using (LinearGradientBrush brush = new LinearGradientBrush(
-                rect,
-                Color.FromArgb(53, 106, 124),
-                Color.FromArgb(24, 76, 90),
-                LinearGradientMode.Vertical))
-            {
-                Blend blend = new Blend();
-                blend.Positions = new float[] { 0f, 0.4f, 0.6f, 1f };
-                blend.Factors = new float[] { 0f, 0.5f, 0.7f, 1f };
-                brush.Blend = blend;
-                e.Graphics.FillRectangle(brush, rect);
-            }*/
-        }
-
-        private void ToolStpMenuUsuarios_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ToolStpMenuPeliculas_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cerrarProgramaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -104,5 +77,24 @@ namespace ProjectoNuevo
             Utils.RedondearBordes(PanelDescripcion, 10);
         }
 
+        private void BtnCargarPelicula_Click(object sender, EventArgs e)
+        {
+            Pelicula nuevaPelicula = new Pelicula
+            {
+                Nombre = TxtNombre.Text,
+                Director = TxtDirector.Text,
+                Duracion = TxtDuracion.Text,
+                FechaEstreno = DtpFechaEstreno.Value,
+                Descripcion = TxtDescripcion.Text,
+                Imagen = PicPelicula.Image
+            };
+
+            UtilsBD.InsertarPeliculaBD(nuevaPelicula);
+        }
+
+        private void ToolStpSubMenuCargarPeliculas_Click(object sender, EventArgs e)
+        {
+            PanelPeliculaCreacion.Visible = true;
+        }
     }
 }

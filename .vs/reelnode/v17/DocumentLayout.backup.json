@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\utilsbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|c:\\dev\\hilet\\algoritmos ii\\reelnode\\reelnode\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FormAdmin.cs [Design]",
               "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\FormAdmin.cs",
               "RelativeDocumentMoniker": "reelnode\\FormAdmin.cs",
@@ -51,67 +47,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Utils.cs",
-              "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\Utils.cs",
-              "RelativeDocumentMoniker": "reelnode\\Utils.cs",
-              "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\Utils.cs",
-              "RelativeToolTip": "reelnode\\Utils.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:03:46.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UtilsBD.cs",
-              "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\UtilsBD.cs",
-              "RelativeDocumentMoniker": "reelnode\\UtilsBD.cs",
-              "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\UtilsBD.cs",
-              "RelativeToolTip": "reelnode\\UtilsBD.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAQwF0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:03:26.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FormAdmin.Designer.cs",
               "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\Reelnode\\FormAdmin.Designer.cs",
               "RelativeDocumentMoniker": "Reelnode\\FormAdmin.Designer.cs",
               "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\Reelnode\\FormAdmin.Designer.cs",
               "RelativeToolTip": "Reelnode\\FormAdmin.Designer.cs",
-              "ViewState": "AgIAAH0BAAAAAAAAAAAqwH0BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAqwHMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:02:06.44Z",
+              "WhenOpened": "2025-09-15T22:45:25.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormAdmin.cs",
-              "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\FormAdmin.cs",
-              "RelativeDocumentMoniker": "reelnode\\FormAdmin.cs",
-              "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\FormAdmin.cs",
-              "RelativeToolTip": "reelnode\\FormAdmin.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAADwv2cAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:51:37.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Pelicula.cs",
               "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\Pelicula.cs",
               "RelativeDocumentMoniker": "reelnode\\Pelicula.cs",
               "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\Pelicula.cs",
               "RelativeToolTip": "reelnode\\Pelicula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:46:52.692Z",
+              "WhenOpened": "2025-09-15T22:31:34.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "reelnode\\FormAdmin.cs",
+              "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\FormAdmin.cs",
+              "RelativeToolTip": "reelnode\\FormAdmin.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAywGAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T22:09:19.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UtilsBD.cs",
+              "DocumentMoniker": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\UtilsBD.cs",
+              "RelativeDocumentMoniker": "reelnode\\UtilsBD.cs",
+              "ToolTip": "C:\\dev\\hilet\\Algoritmos II\\reelnode\\reelnode\\UtilsBD.cs",
+              "RelativeToolTip": "reelnode\\UtilsBD.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T22:06:48.571Z",
               "EditorCaption": ""
             }
           ]

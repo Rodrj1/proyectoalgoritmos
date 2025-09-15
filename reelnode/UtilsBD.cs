@@ -54,18 +54,6 @@ namespace ProjectoNuevo
             }
         }
 
-        private static string ObtenerRolUsuario(Usuario u)
-        {
-            switch (u.RolUsuario.ToLower())
-            {
-                case "Admin":
-                    return "1";
-                case "Usuario":
-                    return "2";
-                default:
-                    return "2";
-            }
-        }
         public static void CargarUsuario()
         {
             Conexion.AbrirBD();
@@ -95,6 +83,19 @@ namespace ProjectoNuevo
                         usuariosRegistrados.Add(u);
                     }
                 }
+            }
+        }
+
+        private static string ObtenerRolUsuario(Usuario u)
+        {
+            switch (u.RolUsuario.ToLower())
+            {
+                case "Admin":
+                    return "1";
+                case "Usuario":
+                    return "2";
+                default:
+                    return "2";
             }
         }
     }

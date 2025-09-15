@@ -32,36 +32,39 @@
             this.ToolStpMenuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuPeliculas = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStpSubMenuCargarPeliculas = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStpSubMenuListarPeliculas = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuSeries = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelPeliculaCreacion = new System.Windows.Forms.Panel();
-            this.BtnIngresar = new System.Windows.Forms.Button();
+            this.BtnCargarPelicula = new System.Windows.Forms.Button();
             this.PanelDescripcion = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.PanelImagen = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PicPelicula = new System.Windows.Forms.PictureBox();
             this.PanelDuracion = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtDuracion = new System.Windows.Forms.TextBox();
             this.PanelDirector = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtDirector = new System.Windows.Forms.TextBox();
             this.PanelFecha = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.PanelUsuario = new System.Windows.Forms.Panel();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LblPanelPelicula = new System.Windows.Forms.Label();
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PanelPeliculaCreacion.SuspendLayout();
             this.PanelDescripcion.SuspendLayout();
             this.PanelImagen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPelicula)).BeginInit();
             this.PanelDuracion.SuspendLayout();
             this.PanelDirector.SuspendLayout();
             this.PanelFecha.SuspendLayout();
@@ -95,15 +98,29 @@
             this.ToolStpMenuUsuarios.Name = "ToolStpMenuUsuarios";
             this.ToolStpMenuUsuarios.Size = new System.Drawing.Size(136, 22);
             this.ToolStpMenuUsuarios.Text = "Gestionar Usuarios";
-            this.ToolStpMenuUsuarios.Click += new System.EventHandler(this.ToolStpMenuUsuarios_Click);
             // 
             // ToolStpMenuPeliculas
             // 
+            this.ToolStpMenuPeliculas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStpSubMenuCargarPeliculas,
+            this.ToolStpSubMenuListarPeliculas});
             this.ToolStpMenuPeliculas.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStpMenuPeliculas.Name = "ToolStpMenuPeliculas";
             this.ToolStpMenuPeliculas.Size = new System.Drawing.Size(135, 22);
             this.ToolStpMenuPeliculas.Text = "Gestionar Peliculas";
-            this.ToolStpMenuPeliculas.Click += new System.EventHandler(this.ToolStpMenuPeliculas_Click);
+            // 
+            // ToolStpSubMenuCargarPeliculas
+            // 
+            this.ToolStpSubMenuCargarPeliculas.Name = "ToolStpSubMenuCargarPeliculas";
+            this.ToolStpSubMenuCargarPeliculas.Size = new System.Drawing.Size(180, 22);
+            this.ToolStpSubMenuCargarPeliculas.Text = "Cargar Pelicula";
+            this.ToolStpSubMenuCargarPeliculas.Click += new System.EventHandler(this.ToolStpSubMenuCargarPeliculas_Click);
+            // 
+            // ToolStpSubMenuListarPeliculas
+            // 
+            this.ToolStpSubMenuListarPeliculas.Name = "ToolStpSubMenuListarPeliculas";
+            this.ToolStpSubMenuListarPeliculas.Size = new System.Drawing.Size(180, 22);
+            this.ToolStpSubMenuListarPeliculas.Text = "Listar Peliculas";
             // 
             // ToolStpMenuSeries
             // 
@@ -128,13 +145,12 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(937, 504);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // PanelPeliculaCreacion
             // 
             this.PanelPeliculaCreacion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.PanelPeliculaCreacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(55)))), ((int)(((byte)(82)))));
-            this.PanelPeliculaCreacion.Controls.Add(this.BtnIngresar);
+            this.PanelPeliculaCreacion.Controls.Add(this.BtnCargarPelicula);
             this.PanelPeliculaCreacion.Controls.Add(this.PanelDescripcion);
             this.PanelPeliculaCreacion.Controls.Add(this.label6);
             this.PanelPeliculaCreacion.Controls.Add(this.PanelImagen);
@@ -152,26 +168,28 @@
             this.PanelPeliculaCreacion.Name = "PanelPeliculaCreacion";
             this.PanelPeliculaCreacion.Size = new System.Drawing.Size(882, 450);
             this.PanelPeliculaCreacion.TabIndex = 0;
+            this.PanelPeliculaCreacion.Visible = false;
             this.PanelPeliculaCreacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // BtnIngresar
+            // BtnCargarPelicula
             // 
-            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.BtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(539, 224);
-            this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(200, 35);
-            this.BtnIngresar.TabIndex = 33;
-            this.BtnIngresar.Text = "Cargar película";
-            this.BtnIngresar.UseVisualStyleBackColor = false;
+            this.BtnCargarPelicula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.BtnCargarPelicula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCargarPelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargarPelicula.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCargarPelicula.ForeColor = System.Drawing.Color.White;
+            this.BtnCargarPelicula.Location = new System.Drawing.Point(534, 224);
+            this.BtnCargarPelicula.Name = "BtnCargarPelicula";
+            this.BtnCargarPelicula.Size = new System.Drawing.Size(205, 35);
+            this.BtnCargarPelicula.TabIndex = 33;
+            this.BtnCargarPelicula.Text = "Cargar película";
+            this.BtnCargarPelicula.UseVisualStyleBackColor = false;
+            this.BtnCargarPelicula.Click += new System.EventHandler(this.BtnCargarPelicula_Click);
             // 
             // PanelDescripcion
             // 
             this.PanelDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelDescripcion.Controls.Add(this.textBox4);
+            this.PanelDescripcion.Controls.Add(this.TxtDescripcion);
             this.PanelDescripcion.Location = new System.Drawing.Point(534, 94);
             this.PanelDescripcion.Name = "PanelDescripcion";
             this.PanelDescripcion.Padding = new System.Windows.Forms.Padding(5);
@@ -179,18 +197,18 @@
             this.PanelDescripcion.TabIndex = 29;
             this.PanelDescripcion.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDescripcion_Paint);
             // 
-            // textBox4
+            // TxtDescripcion
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(5, 5);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 105);
-            this.textBox4.TabIndex = 12;
+            this.TxtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.TxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtDescripcion.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.TxtDescripcion.Location = new System.Drawing.Point(5, 5);
+            this.TxtDescripcion.Multiline = true;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(195, 105);
+            this.TxtDescripcion.TabIndex = 12;
             // 
             // label6
             // 
@@ -208,7 +226,7 @@
             // PanelImagen
             // 
             this.PanelImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelImagen.Controls.Add(this.pictureBox1);
+            this.PanelImagen.Controls.Add(this.PicPelicula);
             this.PanelImagen.Location = new System.Drawing.Point(309, 94);
             this.PanelImagen.Name = "PanelImagen";
             this.PanelImagen.Padding = new System.Windows.Forms.Padding(5);
@@ -216,19 +234,19 @@
             this.PanelImagen.TabIndex = 31;
             this.PanelImagen.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelImagen_Paint);
             // 
-            // pictureBox1
+            // PicPelicula
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 192);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PicPelicula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PicPelicula.Location = new System.Drawing.Point(5, 5);
+            this.PicPelicula.Name = "PicPelicula";
+            this.PicPelicula.Size = new System.Drawing.Size(195, 192);
+            this.PicPelicula.TabIndex = 0;
+            this.PicPelicula.TabStop = false;
             // 
             // PanelDuracion
             // 
             this.PanelDuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelDuracion.Controls.Add(this.textBox3);
+            this.PanelDuracion.Controls.Add(this.TxtDuracion);
             this.PanelDuracion.Location = new System.Drawing.Point(30, 323);
             this.PanelDuracion.Name = "PanelDuracion";
             this.PanelDuracion.Padding = new System.Windows.Forms.Padding(5);
@@ -236,22 +254,22 @@
             this.PanelDuracion.TabIndex = 30;
             this.PanelDuracion.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDuracion_Paint);
             // 
-            // textBox3
+            // TxtDuracion
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(5, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 22);
-            this.textBox3.TabIndex = 12;
+            this.TxtDuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.TxtDuracion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDuracion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtDuracion.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDuracion.ForeColor = System.Drawing.Color.White;
+            this.TxtDuracion.Location = new System.Drawing.Point(5, 5);
+            this.TxtDuracion.Name = "TxtDuracion";
+            this.TxtDuracion.Size = new System.Drawing.Size(195, 22);
+            this.TxtDuracion.TabIndex = 12;
             // 
             // PanelDirector
             // 
             this.PanelDirector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelDirector.Controls.Add(this.textBox2);
+            this.PanelDirector.Controls.Add(this.TxtDirector);
             this.PanelDirector.Location = new System.Drawing.Point(30, 244);
             this.PanelDirector.Name = "PanelDirector";
             this.PanelDirector.Padding = new System.Windows.Forms.Padding(5);
@@ -259,22 +277,22 @@
             this.PanelDirector.TabIndex = 29;
             this.PanelDirector.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelDirector_Paint);
             // 
-            // textBox2
+            // TxtDirector
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 22);
-            this.textBox2.TabIndex = 12;
+            this.TxtDirector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.TxtDirector.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDirector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtDirector.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDirector.ForeColor = System.Drawing.Color.White;
+            this.TxtDirector.Location = new System.Drawing.Point(5, 5);
+            this.TxtDirector.Name = "TxtDirector";
+            this.TxtDirector.Size = new System.Drawing.Size(195, 22);
+            this.TxtDirector.TabIndex = 12;
             // 
             // PanelFecha
             // 
             this.PanelFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelFecha.Controls.Add(this.textBox1);
+            this.PanelFecha.Controls.Add(this.DtpFechaEstreno);
             this.PanelFecha.Location = new System.Drawing.Point(30, 166);
             this.PanelFecha.Name = "PanelFecha";
             this.PanelFecha.Padding = new System.Windows.Forms.Padding(5);
@@ -282,22 +300,18 @@
             this.PanelFecha.TabIndex = 29;
             this.PanelFecha.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelFecha_Paint);
             // 
-            // textBox1
+            // DtpFechaEstreno
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 12;
+            this.DtpFechaEstreno.Font = new System.Drawing.Font("Palatino Linotype", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpFechaEstreno.Location = new System.Drawing.Point(8, 8);
+            this.DtpFechaEstreno.Name = "DtpFechaEstreno";
+            this.DtpFechaEstreno.Size = new System.Drawing.Size(192, 20);
+            this.DtpFechaEstreno.TabIndex = 0;
             // 
             // PanelUsuario
             // 
             this.PanelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.PanelUsuario.Controls.Add(this.TxtUsuario);
+            this.PanelUsuario.Controls.Add(this.TxtNombre);
             this.PanelUsuario.Location = new System.Drawing.Point(30, 94);
             this.PanelUsuario.Name = "PanelUsuario";
             this.PanelUsuario.Padding = new System.Windows.Forms.Padding(5);
@@ -305,17 +319,17 @@
             this.PanelUsuario.TabIndex = 28;
             this.PanelUsuario.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelUsuario_Paint);
             // 
-            // TxtUsuario
+            // TxtNombre
             // 
-            this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtUsuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.ForeColor = System.Drawing.Color.White;
-            this.TxtUsuario.Location = new System.Drawing.Point(5, 5);
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(195, 22);
-            this.TxtUsuario.TabIndex = 12;
+            this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtNombre.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.ForeColor = System.Drawing.Color.White;
+            this.TxtNombre.Location = new System.Drawing.Point(5, 5);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(195, 22);
+            this.TxtNombre.TabIndex = 12;
             // 
             // label5
             // 
@@ -395,6 +409,13 @@
             this.LblPanelPelicula.TabIndex = 22;
             this.LblPanelPelicula.Text = "Nombre de la pelicula";
             // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,13 +435,12 @@
             this.PanelDescripcion.ResumeLayout(false);
             this.PanelDescripcion.PerformLayout();
             this.PanelImagen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicPelicula)).EndInit();
             this.PanelDuracion.ResumeLayout(false);
             this.PanelDuracion.PerformLayout();
             this.PanelDirector.ResumeLayout(false);
             this.PanelDirector.PerformLayout();
             this.PanelFecha.ResumeLayout(false);
-            this.PanelFecha.PerformLayout();
             this.PanelUsuario.ResumeLayout(false);
             this.PanelUsuario.PerformLayout();
             this.ResumeLayout(false);
@@ -445,18 +465,21 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel PanelUsuario;
-        private System.Windows.Forms.TextBox TxtUsuario;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Panel PanelDuracion;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtDuracion;
         private System.Windows.Forms.Panel PanelDirector;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtDirector;
         private System.Windows.Forms.Panel PanelFecha;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel PanelImagen;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PicPelicula;
         private System.Windows.Forms.Panel PanelDescripcion;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnIngresar;
+        private System.Windows.Forms.Button BtnCargarPelicula;
+        private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
+        private System.Windows.Forms.DateTimePicker DtpFechaEstreno;
+        private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuCargarPeliculas;
+        private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuListarPeliculas;
     }
 }
