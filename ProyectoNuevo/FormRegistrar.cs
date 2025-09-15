@@ -1,0 +1,97 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProjectoNuevo
+{
+    public partial class FormRegistrar: Form
+    {
+        public FormRegistrar()
+        {
+            InitializeComponent();
+        }
+
+        private void BtnIngresar_Click(object sender, EventArgs e)
+        {
+            errorProvider.Clear();
+            bool valido = true;
+            if (string.IsNullOrWhiteSpace(TxtUsuario.Text))
+            {
+                valido = false;
+                errorProvider.SetError(TxtUsuario, "El nombre no puede estar vacío.");
+            }
+            errorProvider.SetError(TxtEmail, "");
+            string email = TxtEmail.Text;
+            if (string.IsNullOrEmpty(email))
+            {
+                errorProvider.SetError(TxtEmail, "El email no es válido.");
+                valido = false;
+
+            }
+            else if (!email.Contains("@") || !email.Contains(".com"))
+            {
+                errorProvider.SetError(TxtEmail, "El email no es válido.");
+                valido = false;
+            }
+            else
+            {
+                errorProvider.SetError(TxtEmail, "");
+            }
+
+            if (valido) 
+            {
+                Usuario nuevo = new Usuario
+                {
+                    NombreUsuario = TxtUsuario.Text,
+                    Email = TxtEmail.Text,
+                    Password = TxtPassword.Text,
+                    RolUsuario = "Usuario"
+                };
+
+                /* Utils.usuariosRegistrados.Add(persona);
+                 string toJSON = JsonSerializer.Serialize(Utils.usuariosRegistrados);
+                 File.WriteAllText(Path.Combine(Application.StartupPath, "personas.json"), toJSON);
+                */
+
+                RegistrarUsuarioBD(nuevo);
+                MessageBox.Show("Usuario registrado con éxito", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
+        }
+
+        private void RegistrarUsuarioBD(Usuario nuevoUsuario) 
+        {
+            string query = @"
+            INSERT INTO usuarios (nombre_usuario, password_usuario, email_usuario, id_rol) 
+            VALUES (@nombre, @password, @email, @rol);";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, Utils.Conexion.GetConnection()))
+            {
+                cmd.Parameters.AddWithValue("@nombre", nuevoUsuario.NombreUsuario);
+                cmd.Parameters.AddWithValue("@password", nuevoUsuario.Password);
+                cmd.Parameters.AddWithValue("@email", nuevoUsuario.Email);
+                cmd.Parameters.AddWithValue("@rol", nuevoUsuario.RolUsuario == "Admin" ? 1 : 2);
+
+                cmd.ExecuteNonQuery();
+
+                Utils.usuariosRegistrados.Add(nuevoUsuario);
+            }
+        }
+
+        private void FormRegistrar_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
