@@ -104,3 +104,4 @@ C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\Reelnode.csproj.CoreCompi
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\Reelnode.csproj.Up2Date
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.exe
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.pdb
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormCrearPelicula.resources
