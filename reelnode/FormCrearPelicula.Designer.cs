@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelPeliculaCreacion = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnCargarPelicula = new System.Windows.Forms.Button();
             this.PanelDescripcion = new System.Windows.Forms.Panel();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.LblPanelPelicula = new System.Windows.Forms.Label();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.PanelPeliculaCreacion.SuspendLayout();
             this.PanelDescripcion.SuspendLayout();
             this.PanelImagen.SuspendLayout();
@@ -84,6 +84,21 @@
             this.PanelPeliculaCreacion.Size = new System.Drawing.Size(882, 450);
             this.PanelPeliculaCreacion.TabIndex = 1;
             this.PanelPeliculaCreacion.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPeliculaCreacion_Paint);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.White;
+            this.BtnSalir.Location = new System.Drawing.Point(625, 323);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(205, 35);
+            this.BtnSalir.TabIndex = 34;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnCargarPelicula
             // 
@@ -323,21 +338,6 @@
             this.LblPanelPelicula.Size = new System.Drawing.Size(125, 17);
             this.LblPanelPelicula.TabIndex = 22;
             this.LblPanelPelicula.Text = "Nombre de la pelicula";
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
-            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(625, 323);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(205, 35);
-            this.BtnSalir.TabIndex = 34;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FormCrearPelicula
             // 

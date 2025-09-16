@@ -37,8 +37,11 @@
             this.ToolStpMenuSeries = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.DataGridPeliculas = new System.Windows.Forms.DataGridView();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -68,6 +71,7 @@
             this.ToolStpMenuUsuarios.Name = "ToolStpMenuUsuarios";
             this.ToolStpMenuUsuarios.Size = new System.Drawing.Size(136, 22);
             this.ToolStpMenuUsuarios.Text = "Gestionar Usuarios";
+            this.ToolStpMenuUsuarios.Click += new System.EventHandler(this.ToolStpMenuUsuarios_Click);
             // 
             // ToolStpMenuPeliculas
             // 
@@ -91,6 +95,7 @@
             this.ToolStpSubMenuListarPeliculas.Name = "ToolStpSubMenuListarPeliculas";
             this.ToolStpSubMenuListarPeliculas.Size = new System.Drawing.Size(180, 22);
             this.ToolStpSubMenuListarPeliculas.Text = "Listar Peliculas";
+            this.ToolStpSubMenuListarPeliculas.Click += new System.EventHandler(this.ToolStpSubMenuListarPeliculas_Click);
             // 
             // ToolStpMenuSeries
             // 
@@ -109,11 +114,23 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(25)))), ((int)(((byte)(39)))));
+            this.panel2.Controls.Add(this.DataGridPeliculas);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 26);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 504);
+            this.panel2.Size = new System.Drawing.Size(937, 436);
             this.panel2.TabIndex = 2;
+            // 
+            // DataGridPeliculas
+            // 
+            this.DataGridPeliculas.AllowUserToAddRows = false;
+            this.DataGridPeliculas.AllowUserToDeleteRows = false;
+            this.DataGridPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridPeliculas.Location = new System.Drawing.Point(33, 31);
+            this.DataGridPeliculas.Name = "DataGridPeliculas";
+            this.DataGridPeliculas.ReadOnly = true;
+            this.DataGridPeliculas.Size = new System.Drawing.Size(849, 370);
+            this.DataGridPeliculas.TabIndex = 0;
             // 
             // mySqlDataAdapter1
             // 
@@ -126,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 530);
+            this.ClientSize = new System.Drawing.Size(937, 462);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormAdmin";
@@ -135,6 +152,8 @@
             this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridPeliculas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +171,6 @@
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuCargarPeliculas;
         private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuListarPeliculas;
+        private System.Windows.Forms.DataGridView DataGridPeliculas;
     }
 }

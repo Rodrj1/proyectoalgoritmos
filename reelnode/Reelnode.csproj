@@ -114,6 +114,12 @@
     <Compile Include="FormCrearPelicula.Designer.cs">
       <DependentUpon>FormCrearPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGestionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionUsuarios.Designer.cs">
+      <DependentUpon>FormGestionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     <Compile Include="UtilsBD.cs" />
     <EmbeddedResource Include="FormCrearPelicula.resx">
       <DependentUpon>FormCrearPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionUsuarios.resx">
+      <DependentUpon>FormGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

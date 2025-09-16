@@ -47,6 +47,7 @@ namespace ProjectoNuevo
         private void FormMain_Load(object sender, EventArgs e)
         {
             UtilsBD.CargarUsuario();
+            UtilsBD.CargarPeliculas();
 
             FormLogin login = new FormLogin();
 

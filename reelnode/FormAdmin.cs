@@ -34,5 +34,18 @@ namespace ProjectoNuevo
 
             formCrearPelicula.ShowDialog();
         }
+
+        private void ToolStpSubMenuListarPeliculas_Click(object sender, EventArgs e)
+        {
+            DataGridPeliculas.DataSource = null;
+            DataGridPeliculas.DataSource = UtilsBD.peliculasCargadas;
+        }
+
+        private void ToolStpMenuUsuarios_Click(object sender, EventArgs e)
+        {
+            FormGestionUsuarios f = new FormGestionUsuarios();
+
+            f.ShowDialog();
+        }
     }
 }

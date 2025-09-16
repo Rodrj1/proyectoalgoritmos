@@ -64,7 +64,11 @@ namespace ProjectoNuevo
                 */
 
                 UtilsBD.RegistrarUsuarioBD(nuevo);
-                MessageBox.Show("Usuario registrado con éxito", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Usuario registrado con éxito", "Registro Exitoso", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.
+                    Information);
 
                 this.Close();
             }

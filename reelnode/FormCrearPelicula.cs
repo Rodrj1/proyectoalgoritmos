@@ -19,7 +19,8 @@ namespace ProjectoNuevo
 
         private void FormCrearPelicula_Load(object sender, EventArgs e)
         {
-
+            BtnCargarPelicula.FlatAppearance.BorderColor = Color.FromArgb(25, 47, 71);
+            BtnSalir.FlatAppearance.BorderColor = Color.FromArgb(25, 47, 71);
         }
 
         private void PanelUsuario_Paint(object sender, PaintEventArgs e)

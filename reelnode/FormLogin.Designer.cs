@@ -197,6 +197,7 @@
             this.TxtPassword.ForeColor = System.Drawing.Color.White;
             this.TxtPassword.Location = new System.Drawing.Point(5, 5);
             this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(296, 22);
             this.TxtPassword.TabIndex = 12;
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
