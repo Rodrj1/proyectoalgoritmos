@@ -11,3 +11,36 @@ Radial Buttons: RbtOpcion
 CheckBoxList: ChkList
 
 ToolStripMenu: ToolStpMenuX
+
+## Todo List
+
+# Administrador
+
+❌CRUD de peliculas (por ahora podemos crear), series y usuarios.
+
+✅Importar peliculas/series desde un JSON y Base de datos.
+
+✅Exportar datos a JSON
+
+❌Generar reportes avanzados y PDF
+
+❌Gestionar roles de usuario
+
+❌Moderar comentarios
+
+❌Carga de imagenes
+
+# Usuario
+❌Registrar Calificaciones
+
+❌Consultar series y peliculas con filtros
+
+❌Visualizar imagenes y comentarios
+
+❌Ver historial
+
+❌Exportar historial
+
+❌Dejar comentarios y calificaciones
+
+✅Registrar Visualizaciones
