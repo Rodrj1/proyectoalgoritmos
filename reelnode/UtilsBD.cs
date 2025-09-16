@@ -29,7 +29,7 @@ namespace ProjectoNuevo
                 cmd.Parameters.AddWithValue("@email", nuevoUsuario.Email);
                 cmd.Parameters.AddWithValue("@avatar", null);
                 cmd.Parameters.AddWithValue("@fecha_registro", nuevoUsuario.FechaRegistro);
-                cmd.Parameters.AddWithValue("@rol", ObtenerRolUsuario(nuevoUsuario));
+                cmd.Parameters.AddWithValue("@rol", ObtenerRolUsuario(nuevoUsuario.RolUsuario));
 
                 cmd.ExecuteNonQuery();
 
@@ -40,6 +40,15 @@ namespace ProjectoNuevo
         public static void ModificarUsuarioBD(DataGridView data)
         {
             string nombreUsuario = data.CurrentRow.Cells["NombreUsuario"].Value.ToString();
+
+            if(nombreUsuario == usuarioActual.NombreUsuario)
+            {
+                MessageBox.Show("No puedes modificar tu propio rol mientras estás logueado.", "Modificación no permitida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
             string query = @"
             UPDATE usuario
             SET id_rol = @idRol
@@ -48,7 +57,7 @@ namespace ProjectoNuevo
             using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
             {
                 cmd.Parameters.AddWithValue("@usuario", nombreUsuario);
-                cmd.Parameters.AddWithValue("@idRol", 2);
+                cmd.Parameters.AddWithValue("@idRol", data.Tag.ToString());
 
                 cmd.ExecuteNonQuery();
                 
@@ -89,6 +98,7 @@ namespace ProjectoNuevo
 
         public static void CargarUsuario()
         {
+            usuariosRegistrados.Clear();
             Conexion.AbrirBD();
 
             string query =
@@ -113,15 +123,16 @@ namespace ProjectoNuevo
                             Email = reader.GetString("email_usuario"),
                             RolUsuario = reader.GetString("nombre_rol")
                         };
+
                         usuariosRegistrados.Add(u);
                     }
                 }
             }
         }
 
-        private static string ObtenerRolUsuario(Usuario u)
+        private static string ObtenerRolUsuario(string rol)
         {
-            switch (u.RolUsuario.ToLower())
+            switch (rol)
             {
                 case "Admin":
                     return "1";
