@@ -26,8 +26,6 @@ namespace ProjectoNuevo
             DataGridUsuarios.DataSource = UtilsBD.usuariosRegistrados;
         }
 
-
-
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PanelCambiarRol.Visible = true;
@@ -36,31 +34,22 @@ namespace ProjectoNuevo
 
         private void BtnConfirmar_Click_1(object sender, EventArgs e)
         {
-            UtilsBD.ModificarUsuarioBD(DataGridUsuarios);
-            DataGridUsuarios.DataSource = null;
-            UtilsBD.CargarUsuario();
-            DataGridUsuarios.DataSource = UtilsBD.usuariosRegistrados;
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas cambiar el rol del usuario seleccionado?", "Confirmación", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question);
+
+            if(resultado == DialogResult.Yes) 
+            {
+                UtilsBD.ModificarUsuarioBD(DataGridUsuarios);
+                DataGridUsuarios.DataSource = null;
+                UtilsBD.CargarUsuario();
+                DataGridUsuarios.DataSource = UtilsBD.usuariosRegistrados;
+            }        
         }
 
         private void RbtAdmin_CheckedChanged_1(object sender, EventArgs e) => DataGridUsuarios.Tag = "1";
 
         private void RbtUsuario_CheckedChanged_1(object sender, EventArgs e) => DataGridUsuarios.Tag = "2";
-
-
-        private void DataGridUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (DataGridUsuarios.Columns[e.ColumnIndex].Name == "RolUsuario" &&
-            e.Value != null && e.Value.ToString() == "Admin")
-            {
-                e.CellStyle.ForeColor = Color.Green;
-            } 
-            else if (DataGridUsuarios.Columns[e.ColumnIndex].Name == "RolUsuario" &&
-            e.Value != null && e.Value.ToString() == "Moderador")
-            {
-                e.CellStyle.ForeColor = Color.Purple;
-            } 
-            else e.CellStyle.ForeColor = Color.Black;
-        }
 
         private void BtnExportar_Click(object sender, EventArgs e)
         {
@@ -76,14 +65,12 @@ namespace ProjectoNuevo
                     PdfWriter.GetInstance(pdfDoc, stream);
                     pdfDoc.Open();
 
-                    // Título
                     Paragraph titulo = new Paragraph("Listado de Personas");
                     titulo.Alignment = Element.ALIGN_CENTER;
                     pdfDoc.Add(titulo);
                     pdfDoc.Add(new Paragraph(" ")); // Espacio
 
-                    // Tabla
-                    PdfPTable tabla = new PdfPTable(3); // 3 columnas
+                    PdfPTable tabla = new PdfPTable(4); // 3 columnas
                     tabla.WidthPercentage = 100;
                     tabla.AddCell("Nombre");
                     tabla.AddCell("Email");
@@ -115,6 +102,26 @@ namespace ProjectoNuevo
         private void PanelGrid_Paint(object sender, PaintEventArgs e)
         {
             Utils.RedondearBordes(PanelCambiarRol, 10);
+        }
+
+        private void DataGridUsuarios_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (DataGridUsuarios.Columns[e.ColumnIndex].Name == "RolUsuario" &&
+            e.Value != null && e.Value.ToString() == "Admin")
+            {
+                e.CellStyle.ForeColor = Color.Green;
+            }
+            else if (DataGridUsuarios.Columns[e.ColumnIndex].Name == "RolUsuario" &&
+            e.Value != null && e.Value.ToString() == "Moderador")
+            {
+                e.CellStyle.ForeColor = Color.Purple;
+            }
+            else e.CellStyle.ForeColor = Color.Black;
+        }
+
+        private void DataGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

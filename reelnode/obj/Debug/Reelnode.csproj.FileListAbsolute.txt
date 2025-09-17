@@ -216,3 +216,5 @@ D:\n\reelnode\Reelnode\obj\Debug\Reelnode.csproj.CoreCompileInputs.cache
 D:\n\reelnode\Reelnode\obj\Debug\Reelnode.csproj.Up2Date
 D:\n\reelnode\Reelnode\obj\Debug\ProjectoNuevo.exe
 D:\n\reelnode\Reelnode\obj\Debug\ProjectoNuevo.pdb
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\bin\Debug\itextsharp.dll
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\bin\Debug\itextsharp.xml
