@@ -62,7 +62,7 @@ namespace ProjectoNuevo
             else e.CellStyle.ForeColor = Color.Black;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnExportar_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.Filter = "PDF (*.pdf)|*.pdf";
@@ -105,6 +105,16 @@ namespace ProjectoNuevo
 
                 MessageBox.Show("PDF exportado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void PanelCambiarRol_Paint(object sender, PaintEventArgs e)
+        {
+            Utils.RedondearBordes(PanelCambiarRol, 10);
+        }
+
+        private void PanelGrid_Paint(object sender, PaintEventArgs e)
+        {
+            Utils.RedondearBordes(PanelCambiarRol, 10);
         }
     }
 }

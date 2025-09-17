@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\n\\reelnode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|d:\\n\\reelnode\\reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formgestionusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\formgestionusuarios.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +21,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|d:\\n\\reelnode\\reelnode\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|solutionrelative:reelnode\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7B0D18C3-C234-48CE-BF1A-67EFD3E7B3FD}|Reelnode\\Reelnode.csproj|D:\\n\\reelnode\\reelnode\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -46,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "FormMain.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\FormMain.cs",
               "RelativeDocumentMoniker": "reelnode\\FormMain.cs",
@@ -62,45 +62,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConexionBD.cs",
-              "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\ConexionBD.cs",
-              "RelativeDocumentMoniker": "reelnode\\ConexionBD.cs",
-              "ToolTip": "D:\\n\\reelnode\\reelnode\\ConexionBD.cs",
-              "RelativeToolTip": "reelnode\\ConexionBD.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T22:19:43.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\Usuario.cs",
-              "RelativeDocumentMoniker": "reelnode\\Usuario.cs",
-              "ToolTip": "D:\\n\\reelnode\\reelnode\\Usuario.cs",
-              "RelativeToolTip": "reelnode\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T15:12:01.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "UtilsBD.cs",
               "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\UtilsBD.cs",
               "RelativeDocumentMoniker": "reelnode\\UtilsBD.cs",
               "ToolTip": "D:\\n\\reelnode\\reelnode\\UtilsBD.cs",
               "RelativeToolTip": "reelnode\\UtilsBD.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T15:06:19.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FormGestionUsuarios.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\FormGestionUsuarios.cs",
               "RelativeDocumentMoniker": "reelnode\\FormGestionUsuarios.cs",
@@ -118,10 +93,48 @@
               "RelativeDocumentMoniker": "reelnode\\FormGestionUsuarios.cs",
               "ToolTip": "D:\\n\\reelnode\\reelnode\\FormGestionUsuarios.cs",
               "RelativeToolTip": "reelnode\\FormGestionUsuarios.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAcwF8AAAAvAAAA",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAowHQAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T14:54:05.258Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormGestionUsuarios.Designer.cs",
+              "DocumentMoniker": "D:\\n\\reelnode\\Reelnode\\FormGestionUsuarios.Designer.cs",
+              "RelativeDocumentMoniker": "Reelnode\\FormGestionUsuarios.Designer.cs",
+              "ToolTip": "D:\\n\\reelnode\\Reelnode\\FormGestionUsuarios.Designer.cs",
+              "RelativeToolTip": "Reelnode\\FormGestionUsuarios.Designer.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAcwHgAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:05:19.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConexionBD.cs",
+              "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\ConexionBD.cs",
+              "RelativeDocumentMoniker": "reelnode\\ConexionBD.cs",
+              "ToolTip": "D:\\n\\reelnode\\reelnode\\ConexionBD.cs",
+              "RelativeToolTip": "reelnode\\ConexionBD.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T22:19:43.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\n\\reelnode\\reelnode\\Usuario.cs",
+              "RelativeDocumentMoniker": "reelnode\\Usuario.cs",
+              "ToolTip": "D:\\n\\reelnode\\reelnode\\Usuario.cs",
+              "RelativeToolTip": "reelnode\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T15:12:01.559Z"
             },
             {
               "$type": "Document",
@@ -132,20 +145,7 @@
               "ToolTip": "D:\\n\\reelnode\\reelnode\\FormAdmin.cs [Dise\u00F1o]",
               "RelativeToolTip": "reelnode\\FormAdmin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T22:51:50.655Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormGestionUsuarios.Designer.cs",
-              "DocumentMoniker": "D:\\n\\reelnode\\Reelnode\\FormGestionUsuarios.Designer.cs",
-              "RelativeDocumentMoniker": "Reelnode\\FormGestionUsuarios.Designer.cs",
-              "ToolTip": "D:\\n\\reelnode\\Reelnode\\FormGestionUsuarios.Designer.cs",
-              "RelativeToolTip": "Reelnode\\FormGestionUsuarios.Designer.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T23:05:19.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T22:51:50.655Z"
             },
             {
               "$type": "Document",
@@ -156,8 +156,7 @@
               "ToolTip": "D:\\n\\reelnode\\reelnode\\FormAdmin.cs",
               "RelativeToolTip": "reelnode\\FormAdmin.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T14:53:18.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T14:53:18.751Z"
             }
           ]
         }
