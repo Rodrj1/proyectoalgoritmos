@@ -1,8 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +60,51 @@ namespace ProjectoNuevo
                 e.CellStyle.ForeColor = Color.Purple;
             } 
             else e.CellStyle.ForeColor = Color.Black;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "PDF (*.pdf)|*.pdf";
+            saveFile.FileName = "Personas.pdf";
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 20f, 20f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+
+                    // Título
+                    Paragraph titulo = new Paragraph("Listado de Personas");
+                    titulo.Alignment = Element.ALIGN_CENTER;
+                    pdfDoc.Add(titulo);
+                    pdfDoc.Add(new Paragraph(" ")); // Espacio
+
+                    // Tabla
+                    PdfPTable tabla = new PdfPTable(3); // 3 columnas
+                    tabla.WidthPercentage = 100;
+                    tabla.AddCell("Nombre");
+                    tabla.AddCell("Email");
+                    tabla.AddCell("Fecha Registro");
+                    tabla.AddCell("Rol");
+
+                    foreach (var p in UtilsBD.usuariosRegistrados)
+                    {
+                        tabla.AddCell(p.NombreUsuario);
+                        tabla.AddCell(p.Email);
+                        tabla.AddCell(p.FechaRegistro.ToString());
+                        tabla.AddCell(p.RolUsuario);
+                    }
+
+                    pdfDoc.Add(tabla);
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+
+                MessageBox.Show("PDF exportado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

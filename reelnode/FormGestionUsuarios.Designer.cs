@@ -36,6 +36,7 @@
             this.RbtAdmin = new System.Windows.Forms.RadioButton();
             this.RbtUsuario = new System.Windows.Forms.RadioButton();
             this.BtnConfirmar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridUsuarios)).BeginInit();
             this.CtxMenuModificarRol.SuspendLayout();
             this.PanelCambiarRol.SuspendLayout();
@@ -117,12 +118,23 @@
             this.BtnConfirmar.UseVisualStyleBackColor = true;
             this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(229, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormGestionUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(25)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.PanelCambiarRol);
             this.Controls.Add(this.DataGridUsuarios);
             this.Name = "FormGestionUsuarios";
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Button BtnConfirmar;
         private System.Windows.Forms.RadioButton RbtAdmin;
         private System.Windows.Forms.RadioButton RbtUsuario;
+        private System.Windows.Forms.Button button1;
     }
 }
