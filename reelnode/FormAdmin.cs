@@ -28,24 +28,34 @@ namespace ProjectoNuevo
 
         }
 
-        private void ToolStpSubMenuCargarPeliculas_Click(object sender, EventArgs e)
-        {
-            FormCrearPelicula formCrearPelicula = new FormCrearPelicula();
-
-            formCrearPelicula.ShowDialog();
-        }
-
         private void ToolStpSubMenuListarPeliculas_Click(object sender, EventArgs e)
         {
             DataGridPeliculas.DataSource = null;
             DataGridPeliculas.DataSource = UtilsBD.peliculasCargadas;
         }
+        private void ToolStpSubMenuCargarPeliculas_Click(object sender, EventArgs e)
+        {
+            FormCrearPelicula f = new FormCrearPelicula();
 
+            f.ShowDialog();
+        }
         private void ToolStpMenuUsuarios_Click(object sender, EventArgs e)
         {
             FormGestionUsuarios f = new FormGestionUsuarios();
 
             f.ShowDialog();
+        }
+
+        private void ToolStpMenuActualizarPelicula_Click(object sender, EventArgs e)
+        {
+            FormActualizarPelicula f = new FormActualizarPelicula();
+
+            f.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

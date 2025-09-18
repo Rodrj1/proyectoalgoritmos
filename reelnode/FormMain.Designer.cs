@@ -32,7 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStpMenuArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuAdmin = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(823, 31);
+            this.panel1.Size = new System.Drawing.Size(1115, 31);
             this.panel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -53,7 +53,7 @@
             this.ToolStpMenuAdmin});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(823, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1115, 26);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,21 +72,21 @@
             this.ToolStpMenuAdmin.Text = "Administrar Contenido";
             this.ToolStpMenuAdmin.Click += new System.EventHandler(this.ToolStpMenuAdmin_Click);
             // 
-            // panel2
+            // PanelMain
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(823, 502);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMain.Location = new System.Drawing.Point(0, 31);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(1115, 553);
+            this.PanelMain.TabIndex = 1;
+            this.PanelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 533);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1115, 584);
+            this.Controls.Add(this.PanelMain);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
@@ -106,7 +106,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuArchivo;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PanelMain;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuAdmin;
     }
 }

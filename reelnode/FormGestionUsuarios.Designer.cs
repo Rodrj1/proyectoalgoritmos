@@ -49,12 +49,12 @@
             this.CtxMenuModificarRol.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modificarToolStripMenuItem});
             this.CtxMenuModificarRol.Name = "CtxMenuModificarRol";
-            this.CtxMenuModificarRol.Size = new System.Drawing.Size(126, 26);
+            this.CtxMenuModificarRol.Size = new System.Drawing.Size(181, 48);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -144,7 +144,6 @@
             this.DataGridUsuarios.ReadOnly = true;
             this.DataGridUsuarios.Size = new System.Drawing.Size(683, 230);
             this.DataGridUsuarios.TabIndex = 2;
-            this.DataGridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridUsuarios_CellContentClick);
             this.DataGridUsuarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridUsuarios_CellFormatting_1);
             // 
             // FormGestionUsuarios

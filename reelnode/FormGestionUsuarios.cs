@@ -118,10 +118,5 @@ namespace ProjectoNuevo
             }
             else e.CellStyle.ForeColor = Color.Black;
         }
-
-        private void DataGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

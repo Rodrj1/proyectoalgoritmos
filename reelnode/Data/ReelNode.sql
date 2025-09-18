@@ -1,6 +1,6 @@
 create database ReelNode;
 use ReelNode;
-
+SET SQL_SAFE_UPDATES = 0;
 CREATE TABLE peliculas (
     id_pelicula INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(255) NOT NULL,

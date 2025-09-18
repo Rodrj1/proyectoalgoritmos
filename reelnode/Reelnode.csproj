@@ -110,7 +110,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlAdmin.Designer.cs">
+      <DependentUpon>ControlAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlGestionPeliculasCargar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlGestionPeliculasCargar.Designer.cs">
+      <DependentUpon>ControlGestionPeliculasCargar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConexionBD.cs" />
+    <Compile Include="ControlGestionPeliculasListarPeliculas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlGestionPeliculasListarPeliculas.Designer.cs">
+      <DependentUpon>ControlGestionPeliculasListarPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlGestionUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlGestionUsuarios.Designer.cs">
+      <DependentUpon>ControlGestionUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActualizarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActualizarPelicula.Designer.cs">
+      <DependentUpon>FormActualizarPelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCrearPelicula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +184,21 @@
     <Compile Include="Usuario.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="UtilsBD.cs" />
+    <EmbeddedResource Include="ControlAdmin.resx">
+      <DependentUpon>ControlAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGestionPeliculasCargar.resx">
+      <DependentUpon>ControlGestionPeliculasCargar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGestionPeliculasListarPeliculas.resx">
+      <DependentUpon>ControlGestionPeliculasListarPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGestionUsuarios.resx">
+      <DependentUpon>ControlGestionUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActualizarPelicula.resx">
+      <DependentUpon>FormActualizarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCrearPelicula.resx">
       <DependentUpon>FormCrearPelicula.cs</DependentUpon>
     </EmbeddedResource>

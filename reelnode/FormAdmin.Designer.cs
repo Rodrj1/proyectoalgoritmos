@@ -34,6 +34,7 @@
             this.ToolStpMenuPeliculas = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpSubMenuCargarPeliculas = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpSubMenuListarPeliculas = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStpMenuActualizarPelicula = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuSeries = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(937, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // ToolStpMenuArchivo
             // 
@@ -77,7 +79,8 @@
             // 
             this.ToolStpMenuPeliculas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStpSubMenuCargarPeliculas,
-            this.ToolStpSubMenuListarPeliculas});
+            this.ToolStpSubMenuListarPeliculas,
+            this.ToolStpMenuActualizarPelicula});
             this.ToolStpMenuPeliculas.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStpMenuPeliculas.Name = "ToolStpMenuPeliculas";
             this.ToolStpMenuPeliculas.Size = new System.Drawing.Size(135, 22);
@@ -86,16 +89,23 @@
             // ToolStpSubMenuCargarPeliculas
             // 
             this.ToolStpSubMenuCargarPeliculas.Name = "ToolStpSubMenuCargarPeliculas";
-            this.ToolStpSubMenuCargarPeliculas.Size = new System.Drawing.Size(180, 22);
+            this.ToolStpSubMenuCargarPeliculas.Size = new System.Drawing.Size(190, 22);
             this.ToolStpSubMenuCargarPeliculas.Text = "Cargar Pelicula";
             this.ToolStpSubMenuCargarPeliculas.Click += new System.EventHandler(this.ToolStpSubMenuCargarPeliculas_Click);
             // 
             // ToolStpSubMenuListarPeliculas
             // 
             this.ToolStpSubMenuListarPeliculas.Name = "ToolStpSubMenuListarPeliculas";
-            this.ToolStpSubMenuListarPeliculas.Size = new System.Drawing.Size(180, 22);
+            this.ToolStpSubMenuListarPeliculas.Size = new System.Drawing.Size(190, 22);
             this.ToolStpSubMenuListarPeliculas.Text = "Listar Peliculas";
             this.ToolStpSubMenuListarPeliculas.Click += new System.EventHandler(this.ToolStpSubMenuListarPeliculas_Click);
+            // 
+            // ToolStpMenuActualizarPelicula
+            // 
+            this.ToolStpMenuActualizarPelicula.Name = "ToolStpMenuActualizarPelicula";
+            this.ToolStpMenuActualizarPelicula.Size = new System.Drawing.Size(190, 22);
+            this.ToolStpMenuActualizarPelicula.Text = "Actualizar Pelicula";
+            this.ToolStpMenuActualizarPelicula.Click += new System.EventHandler(this.ToolStpMenuActualizarPelicula_Click);
             // 
             // ToolStpMenuSeries
             // 
@@ -106,8 +116,9 @@
             // 
             // cerrarProgramaToolStripMenuItem
             // 
+            this.cerrarProgramaToolStripMenuItem.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cerrarProgramaToolStripMenuItem.Name = "cerrarProgramaToolStripMenuItem";
-            this.cerrarProgramaToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.cerrarProgramaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.cerrarProgramaToolStripMenuItem.Text = "Cerrar Programa";
             this.cerrarProgramaToolStripMenuItem.Click += new System.EventHandler(this.cerrarProgramaToolStripMenuItem_Click);
             // 
@@ -129,7 +140,7 @@
             this.DataGridPeliculas.Location = new System.Drawing.Point(33, 31);
             this.DataGridPeliculas.Name = "DataGridPeliculas";
             this.DataGridPeliculas.ReadOnly = true;
-            this.DataGridPeliculas.Size = new System.Drawing.Size(849, 370);
+            this.DataGridPeliculas.Size = new System.Drawing.Size(846, 353);
             this.DataGridPeliculas.TabIndex = 0;
             // 
             // mySqlDataAdapter1
@@ -172,5 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuCargarPeliculas;
         private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuListarPeliculas;
         private System.Windows.Forms.DataGridView DataGridPeliculas;
+        private System.Windows.Forms.ToolStripMenuItem ToolStpMenuActualizarPelicula;
     }
 }

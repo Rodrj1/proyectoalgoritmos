@@ -18,31 +18,36 @@ namespace ProjectoNuevo
 {
     public partial class FormMain : Form
     {
-        
+        private ControlAdmin controlAdmin;
+
         public FormMain()
         {
             InitializeComponent();
+
+            controlAdmin = new ControlAdmin();
+
+            PanelMain.Controls.Add(controlAdmin);
+
+            controlAdmin.Visible = false;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             using (LinearGradientBrush brush = new LinearGradientBrush(
-                panel2.ClientRectangle,
+                PanelMain.ClientRectangle,
                 Color.DarkSlateGray,
                 Color.FloralWhite,
                 LinearGradientMode.Vertical))
             {
-                e.Graphics.FillRectangle(brush, panel2.ClientRectangle);
+                e.Graphics.FillRectangle(brush, PanelMain.ClientRectangle);
             }
         }
 
         private void ToolStpMenuAdmin_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            FormAdmin ventana = new FormAdmin();
-
-            ventana.ShowDialog();
+            Utils.ShowControl(controlAdmin, PanelMain);
         }
+
 
         private void FormMain_Load(object sender, EventArgs e)
         {

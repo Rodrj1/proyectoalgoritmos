@@ -218,3 +218,8 @@ D:\n\reelnode\Reelnode\obj\Debug\ProjectoNuevo.exe
 D:\n\reelnode\Reelnode\obj\Debug\ProjectoNuevo.pdb
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\bin\Debug\itextsharp.dll
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\bin\Debug\itextsharp.xml
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormActualizarPelicula.resources
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasCargar.resources
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlAdmin.resources
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasListarPeliculas.resources
+C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionUsuarios.resources

@@ -28,5 +28,15 @@ namespace ProjectoNuevo
 
             panel.Region = new Region(path);
         }
+
+        public static void ShowControl(UserControl controlToShow, Panel panel)
+        {
+            foreach (Control control in panel.Controls)
+            {
+                control.Visible = false;
+            }
+            controlToShow.Visible = true;
+            controlToShow.Dock = DockStyle.Fill;
+        }
     }
 }
