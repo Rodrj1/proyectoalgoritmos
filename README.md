@@ -22,6 +22,8 @@ ToolStripMenu: ToolStpMenuX
 
 ✅Exportar datos a JSON
 
+✅Exportar usuarios a PDF
+
 ❌Generar reportes avanzados y PDF
 
 ❌Gestionar roles de usuario
