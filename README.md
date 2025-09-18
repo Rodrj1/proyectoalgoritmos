@@ -14,6 +14,14 @@ ToolStripMenu: ToolStpMenuX
 
 ## Todo List
 
+# Login
+
+✅Logear al sistema
+
+✅Registrarse en el sistema
+
+❌¿Olvide mi contraseña?
+
 # Administrador
 
 ✅Crear peliculas
