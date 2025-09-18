@@ -14,17 +14,33 @@ ToolStripMenu: ToolStpMenuX
 
 ## Todo List
 
+# Login
+
+✅Logear al sistema
+
+✅Registrarse en el sistema
+
+❌¿Olvide mi contraseña?
+
 # Administrador
 
-❌CRUD de peliculas (por ahora podemos crear), series y usuarios.
+✅Crear peliculas
+
+❌Actualizar peliculas
+
+❌Obtener peliculas
+
+❌Borrar peliculas
 
 ✅Importar peliculas/series desde un JSON y Base de datos.
 
 ✅Exportar datos a JSON
 
+✅Exportar usuarios a PDF
+
 ❌Generar reportes avanzados y PDF
 
-❌Gestionar roles de usuario
+✅Gestionar roles de usuario
 
 ❌Moderar comentarios
 
