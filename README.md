@@ -16,7 +16,13 @@ ToolStripMenu: ToolStpMenuX
 
 # Administrador
 
-❌CRUD de peliculas (por ahora podemos crear), series y usuarios.
+✅Crear peliculas
+
+❌Actualizar peliculas
+
+❌Obtener peliculas
+
+❌Borrar peliculas
 
 ✅Importar peliculas/series desde un JSON y Base de datos.
 
@@ -26,7 +32,7 @@ ToolStripMenu: ToolStpMenuX
 
 ❌Generar reportes avanzados y PDF
 
-❌Gestionar roles de usuario
+✅Gestionar roles de usuario
 
 ❌Moderar comentarios
 
