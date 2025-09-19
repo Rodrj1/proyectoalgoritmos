@@ -36,7 +36,6 @@
             this.ToolStpSubMenuListarPeliculas = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuActualizarPelicula = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStpMenuSeries = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarProgramaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelAdmin = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,8 +46,7 @@
             this.ToolStpMenuArchivo,
             this.ToolStpMenuUsuarios,
             this.ToolStpMenuPeliculas,
-            this.ToolStpMenuSeries,
-            this.cerrarProgramaToolStripMenuItem});
+            this.ToolStpMenuSeries});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(863, 26);
@@ -100,6 +98,7 @@
             this.ToolStpMenuActualizarPelicula.Name = "ToolStpMenuActualizarPelicula";
             this.ToolStpMenuActualizarPelicula.Size = new System.Drawing.Size(190, 22);
             this.ToolStpMenuActualizarPelicula.Text = "Actualizar Pelicula";
+            this.ToolStpMenuActualizarPelicula.Click += new System.EventHandler(this.ToolStpMenuActualizarPelicula_Click);
             // 
             // ToolStpMenuSeries
             // 
@@ -108,15 +107,10 @@
             this.ToolStpMenuSeries.Size = new System.Drawing.Size(117, 22);
             this.ToolStpMenuSeries.Text = "Gestionar Series";
             // 
-            // cerrarProgramaToolStripMenuItem
-            // 
-            this.cerrarProgramaToolStripMenuItem.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarProgramaToolStripMenuItem.Name = "cerrarProgramaToolStripMenuItem";
-            this.cerrarProgramaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.cerrarProgramaToolStripMenuItem.Text = "Cerrar Programa";
-            // 
             // PanelAdmin
             // 
+            this.PanelAdmin.AutoSize = true;
+            this.PanelAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(55)))), ((int)(((byte)(82)))));
             this.PanelAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelAdmin.Location = new System.Drawing.Point(0, 26);
             this.PanelAdmin.Name = "PanelAdmin";
@@ -148,7 +142,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStpSubMenuListarPeliculas;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuActualizarPelicula;
         private System.Windows.Forms.ToolStripMenuItem ToolStpMenuSeries;
-        private System.Windows.Forms.ToolStripMenuItem cerrarProgramaToolStripMenuItem;
         private System.Windows.Forms.Panel PanelAdmin;
     }
 }

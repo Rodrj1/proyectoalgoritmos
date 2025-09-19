@@ -15,14 +15,17 @@ namespace ProjectoNuevo
         public ControlGestionPeliculasListarPeliculas()
         {
             InitializeComponent();
-
-            DataGridPeliculas.DataSource = null;
-            DataGridPeliculas.DataSource = UtilsBD.peliculasCargadas;
         }
 
         private void PanelListar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ControlGestionPeliculasListarPeliculas_Load(object sender, EventArgs e)
+        {
+            DataGridPeliculas.DataSource = null;
+            DataGridPeliculas.DataSource = UtilsBD.peliculasCargadas;
         }
     }
 }

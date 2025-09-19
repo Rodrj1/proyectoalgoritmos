@@ -147,9 +147,7 @@ D:\Rodrigo\Algoritmos2\reelnode\Reelnode\bin\Debug\System.Text.Json.xml
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\bin\Debug\System.ValueTuple.xml
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\Reelnode.csproj.AssemblyReference.cache
-D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormCrearPelicula.resources
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormMain.resources
-D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormAdmin.resources
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormLogin.resources
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormRegistrar.resources
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.Properties.Resources.resources
@@ -158,7 +156,6 @@ D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\Reelnode.csproj.CoreCompileIn
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\Reelnode.csproj.Up2Date
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.exe
 D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.pdb
-D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormGestionUsuarios.resources
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.FormGestionUsuarios.resources
 D:\n\reelnode\Reelnode\bin\Debug\ProjectoNuevo.exe.config
 D:\n\reelnode\Reelnode\bin\Debug\ProjectoNuevo.exe
@@ -223,3 +220,10 @@ C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGest
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlAdmin.resources
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasListarPeliculas.resources
 C:\dev\hilet\Algoritmos II\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionUsuarios.resources
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlAdmin.resources
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasCargar.resources
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasListarPeliculas.resources
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionUsuarios.resources
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\bin\Debug\itextsharp.dll
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\bin\Debug\itextsharp.xml
+D:\Rodrigo\Algoritmos2\reelnode\Reelnode\obj\Debug\ProjectoNuevo.ControlGestionPeliculasActualizar.resources

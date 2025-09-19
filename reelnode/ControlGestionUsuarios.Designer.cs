@@ -62,11 +62,11 @@
             // 
             // PanelGrid
             // 
-            this.PanelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(43)))));
+            this.PanelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
             this.PanelGrid.Controls.Add(this.DataGridUsuarios);
-            this.PanelGrid.Location = new System.Drawing.Point(76, 68);
+            this.PanelGrid.Location = new System.Drawing.Point(76, 22);
             this.PanelGrid.Name = "PanelGrid";
-            this.PanelGrid.Size = new System.Drawing.Size(707, 253);
+            this.PanelGrid.Size = new System.Drawing.Size(707, 156);
             this.PanelGrid.TabIndex = 8;
             // 
             // DataGridUsuarios
@@ -80,18 +80,19 @@
             this.DataGridUsuarios.Location = new System.Drawing.Point(13, 9);
             this.DataGridUsuarios.Name = "DataGridUsuarios";
             this.DataGridUsuarios.ReadOnly = true;
-            this.DataGridUsuarios.Size = new System.Drawing.Size(683, 230);
+            this.DataGridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridUsuarios.Size = new System.Drawing.Size(683, 136);
             this.DataGridUsuarios.TabIndex = 2;
             this.DataGridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridUsuarios_CellContentClick);
             this.DataGridUsuarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGridUsuarios_CellFormatting);
             // 
             // PanelCambiarRol
             // 
-            this.PanelCambiarRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(43)))));
+            this.PanelCambiarRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(47)))), ((int)(((byte)(71)))));
             this.PanelCambiarRol.Controls.Add(this.RbtAdmin);
             this.PanelCambiarRol.Controls.Add(this.RbtUsuario);
             this.PanelCambiarRol.Controls.Add(this.BtnConfirmar);
-            this.PanelCambiarRol.Location = new System.Drawing.Point(497, 347);
+            this.PanelCambiarRol.Location = new System.Drawing.Point(497, 212);
             this.PanelCambiarRol.Name = "PanelCambiarRol";
             this.PanelCambiarRol.Size = new System.Drawing.Size(286, 100);
             this.PanelCambiarRol.TabIndex = 9;
@@ -139,7 +140,7 @@
             // BtnExportar
             // 
             this.BtnExportar.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExportar.Location = new System.Drawing.Point(76, 409);
+            this.BtnExportar.Location = new System.Drawing.Point(76, 274);
             this.BtnExportar.Name = "BtnExportar";
             this.BtnExportar.Size = new System.Drawing.Size(120, 38);
             this.BtnExportar.TabIndex = 10;
@@ -149,7 +150,7 @@
             // 
             // PanelGestionUsuarios
             // 
-            this.PanelGestionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(25)))), ((int)(((byte)(39)))));
+            this.PanelGestionUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(55)))), ((int)(((byte)(82)))));
             this.PanelGestionUsuarios.Controls.Add(this.BtnExportar);
             this.PanelGestionUsuarios.Controls.Add(this.PanelCambiarRol);
             this.PanelGestionUsuarios.Controls.Add(this.PanelGrid);

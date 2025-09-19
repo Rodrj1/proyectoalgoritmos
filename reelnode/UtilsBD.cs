@@ -64,48 +64,15 @@ namespace ProjectoNuevo
             }
         }
 
-        public static void InsertarPeliculaBD(Pelicula nuevaPelicula)
-        {
-            try
-            {
-                string query = @"
-                INSERT INTO peliculas (nombre, fecha_estreno, descripcion, director, imagen, duracion) 
-                VALUES (@nombre, @fecha_estreno, @descripcion, @director, @imagen, @duracion);";
-
-                using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
-                {
-                    cmd.Parameters.AddWithValue("@nombre", nuevaPelicula.Nombre);
-                    cmd.Parameters.AddWithValue("@fecha_estreno", nuevaPelicula.FechaEstreno);
-                    cmd.Parameters.AddWithValue("@descripcion", nuevaPelicula.Descripcion);
-                    cmd.Parameters.AddWithValue("@director", nuevaPelicula.Director);
-                    cmd.Parameters.AddWithValue("@imagen", nuevaPelicula.Imagen);
-                    cmd.Parameters.AddWithValue("@duracion", nuevaPelicula.Duracion);
-                    cmd.ExecuteNonQuery();
-
-                    peliculasCargadas.Add(nuevaPelicula);
-
-                    MessageBox.Show("Pelicula cargada con éxito", "Carga Exitosa",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.
-                    Information);
-                }
-            } catch (Exception ex) 
-            { 
-                MessageBox.Show(ex.Message); 
-            }
-            
-        }
-
         public static void CargarUsuario()
         {
             usuariosRegistrados.Clear();
-            Conexion.AbrirBD();
 
             string query =
                 "SELECT " +
                 "u.nombre_usuario, " +
                 "u.password_usuario, " +
-                "u.email_usuario,"+
+                "u.email_usuario," +
                 "r.tipo_rol as nombre_rol\r\n" +
                 "FROM usuario u\r\n" +
                 "INNER JOIN rol r on r.id_rol = u.id_rol;";
@@ -143,15 +110,48 @@ namespace ProjectoNuevo
             }
         }
 
+        public static void InsertarPeliculaBD(Pelicula nuevaPelicula)
+        {
+            try
+            {
+                string query = @"
+                INSERT INTO peliculas (nombre, fecha_estreno, descripcion, director, imagen, duracion) 
+                VALUES (@nombre, @fecha_estreno, @descripcion, @director, @imagen, @duracion);";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", nuevaPelicula.Nombre);
+                    cmd.Parameters.AddWithValue("@fecha_estreno", nuevaPelicula.FechaEstreno);
+                    cmd.Parameters.AddWithValue("@descripcion", nuevaPelicula.Descripcion);
+                    cmd.Parameters.AddWithValue("@director", nuevaPelicula.Director);
+                    cmd.Parameters.AddWithValue("@imagen", nuevaPelicula.Imagen);
+                    cmd.Parameters.AddWithValue("@duracion", nuevaPelicula.Duracion);
+                    cmd.ExecuteNonQuery();
+
+                    peliculasCargadas.Add(nuevaPelicula);
+
+                    MessageBox.Show("Pelicula cargada con éxito", "Carga Exitosa",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.
+                    Information);
+                }
+            } catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message); 
+            }
+            
+        }
+
         public static void CargarPeliculas()
         {
-            Conexion.AbrirBD();
 
             string query =
                 "SELECT " +
+                "p.id_pelicula," +
                 "p.nombre, " +
                 "p.fecha_estreno, " +
                 "p.director," +
+                "p.descripcion," +
                 "p.duracion\r\n" +
                 "FROM peliculas p\r\n";
 
@@ -163,10 +163,12 @@ namespace ProjectoNuevo
                     {
                         Pelicula nueva = new Pelicula();
                         {
+                            nueva.Id = reader.GetInt32("id_pelicula");
                             nueva.Nombre = reader.GetString("nombre");
                             nueva.FechaEstreno = reader.GetDateTime("fecha_estreno");
                             nueva.Director = reader.GetString("director");
                             nueva.Duracion = reader.GetString("duracion");
+                            nueva.Descripcion = reader.GetString("descripcion");
                         }
 
                         peliculasCargadas.Add(nueva);
@@ -174,5 +176,53 @@ namespace ProjectoNuevo
                 }
             }
         }
+
+        public static void ActualizarPelicula(Pelicula actualizarPelicula) 
+        {
+            MessageBox.Show(actualizarPelicula.Id.ToString());
+
+            try
+            {
+                string query = "UPDATE peliculas SET " +
+               "nombre = @nombre, " +
+               "descripcion = @descripcion, " +
+               "director = @director, " +
+               "imagen = @imagen, " +
+               "duracion = @duracion " +
+               "WHERE id_pelicula = @idPelicula";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", actualizarPelicula.Nombre);
+                    cmd.Parameters.AddWithValue("@fecha_estreno", actualizarPelicula.FechaEstreno);
+                    cmd.Parameters.AddWithValue("@descripcion", actualizarPelicula.Descripcion);
+                    cmd.Parameters.AddWithValue("@director", actualizarPelicula.Director);
+                    cmd.Parameters.AddWithValue("@imagen", actualizarPelicula.Imagen);
+                    cmd.Parameters.AddWithValue("@duracion", actualizarPelicula.Duracion);
+                    cmd.Parameters.AddWithValue("@idPelicula", actualizarPelicula.Id);
+
+                    cmd.ExecuteNonQuery();
+
+                    peliculasCargadas.Clear();
+                    UtilsBD.CargarPeliculas();
+
+                    MessageBox.Show("Pelicula cargada con éxito", "Carga Exitosa",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.
+                    Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
+           
+        }
     }
 }
+/*nombre VARCHAR(255) NOT NULL,
+    fecha_estreno DATE NOT NULL,
+    descripcion VARCHAR(255),
+    director VARCHAR(255),
+    imagen MEDIUMBLOB,
+    duracion VARCHAR(50)*/

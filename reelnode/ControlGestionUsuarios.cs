@@ -37,9 +37,9 @@ namespace ProjectoNuevo
                     Paragraph titulo = new Paragraph("Listado de Personas");
                     titulo.Alignment = Element.ALIGN_CENTER;
                     pdfDoc.Add(titulo);
-                    pdfDoc.Add(new Paragraph(" ")); // Espacio
+                    pdfDoc.Add(new Paragraph(" "));
 
-                    PdfPTable tabla = new PdfPTable(4); // 3 columnas
+                    PdfPTable tabla = new PdfPTable(4); 
                     tabla.WidthPercentage = 100;
                     tabla.AddCell("Nombre");
                     tabla.AddCell("Email");
@@ -72,8 +72,8 @@ namespace ProjectoNuevo
             if (resultado == DialogResult.Yes)
             {
                 UtilsBD.ModificarUsuarioBD(DataGridUsuarios);
-                DataGridUsuarios.DataSource = null;
                 UtilsBD.CargarUsuario();
+                DataGridUsuarios.DataSource = null;
                 DataGridUsuarios.DataSource = UtilsBD.usuariosRegistrados;
             }
         }

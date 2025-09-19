@@ -41,7 +41,7 @@
             this.PanelListar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelListar.Location = new System.Drawing.Point(0, 0);
             this.PanelListar.Name = "PanelListar";
-            this.PanelListar.Size = new System.Drawing.Size(911, 437);
+            this.PanelListar.Size = new System.Drawing.Size(879, 437);
             this.PanelListar.TabIndex = 0;
             this.PanelListar.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelListar_Paint);
             // 
@@ -49,11 +49,14 @@
             // 
             this.DataGridPeliculas.AllowUserToAddRows = false;
             this.DataGridPeliculas.AllowUserToDeleteRows = false;
+            this.DataGridPeliculas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(43)))));
             this.DataGridPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridPeliculas.Location = new System.Drawing.Point(26, 38);
+            this.DataGridPeliculas.Location = new System.Drawing.Point(105, 20);
             this.DataGridPeliculas.Name = "DataGridPeliculas";
             this.DataGridPeliculas.ReadOnly = true;
-            this.DataGridPeliculas.Size = new System.Drawing.Size(846, 353);
+            this.DataGridPeliculas.RowHeadersVisible = false;
+            this.DataGridPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridPeliculas.Size = new System.Drawing.Size(683, 230);
             this.DataGridPeliculas.TabIndex = 2;
             // 
             // ControlGestionPeliculasListarPeliculas
@@ -62,7 +65,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelListar);
             this.Name = "ControlGestionPeliculasListarPeliculas";
-            this.Size = new System.Drawing.Size(911, 437);
+            this.Size = new System.Drawing.Size(879, 437);
+            this.Load += new System.EventHandler(this.ControlGestionPeliculasListarPeliculas_Load);
             this.PanelListar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPeliculas)).EndInit();
             this.ResumeLayout(false);

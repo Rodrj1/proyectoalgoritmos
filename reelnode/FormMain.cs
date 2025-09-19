@@ -33,14 +33,14 @@ namespace ProjectoNuevo
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            using (LinearGradientBrush brush = new LinearGradientBrush(
+            /*using (LinearGradientBrush brush = new LinearGradientBrush(
                 PanelMain.ClientRectangle,
                 Color.DarkSlateGray,
                 Color.FloralWhite,
                 LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(brush, PanelMain.ClientRectangle);
-            }
+            }*/
         }
 
         private void ToolStpMenuAdmin_Click(object sender, EventArgs e)
@@ -51,6 +51,7 @@ namespace ProjectoNuevo
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            UtilsBD.Conexion.AbrirBD();
             UtilsBD.CargarUsuario();
             UtilsBD.CargarPeliculas();
 

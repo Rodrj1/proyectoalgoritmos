@@ -14,7 +14,9 @@ namespace ProjectoNuevo
     {
         private ControlGestionPeliculasCargar controlCargarPelicula;
         private ControlGestionPeliculasListarPeliculas controlListarPeliculas;
+        private ControlGestionPeliculasActualizar controlActualizarPeliculas;
         private ControlGestionUsuarios controlGestionUsuarios;
+
         public ControlAdmin()
         {
             InitializeComponent();
@@ -22,9 +24,11 @@ namespace ProjectoNuevo
             PanelAdmin.Controls.Add(controlCargarPelicula = new ControlGestionPeliculasCargar());
             PanelAdmin.Controls.Add(controlListarPeliculas = new ControlGestionPeliculasListarPeliculas());
             PanelAdmin.Controls.Add(controlGestionUsuarios = new ControlGestionUsuarios());
+            PanelAdmin.Controls.Add(controlActualizarPeliculas = new ControlGestionPeliculasActualizar());
             controlCargarPelicula.Visible = false;
             controlListarPeliculas.Visible = false;
             controlGestionUsuarios.Visible = false;
+            controlActualizarPeliculas.Visible = false;
         }
 
         private void ToolStpSubMenuCargarPeliculas_Click(object sender, EventArgs e)
@@ -40,6 +44,11 @@ namespace ProjectoNuevo
         private void ToolStpMenuUsuarios_Click(object sender, EventArgs e)
         {
             Utils.ShowControl(controlGestionUsuarios, PanelAdmin);
+        }
+
+        private void ToolStpMenuActualizarPelicula_Click(object sender, EventArgs e)
+        {
+            Utils.ShowControl(controlActualizarPeliculas, PanelAdmin);
         }
     }
 }

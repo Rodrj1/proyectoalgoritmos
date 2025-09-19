@@ -9,6 +9,7 @@ namespace ProjectoNuevo
 {
     public class Pelicula
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public DateTime FechaEstreno {  get; set; }
         public string Descripcion { get; set; }
