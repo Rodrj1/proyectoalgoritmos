@@ -87,5 +87,16 @@ namespace ProjectoNuevo
                 }
             }
         }
+
+        private void CtxMenuSubEliminar_Click(object sender, EventArgs e)
+        {
+            if (filaSeleccionada != null) 
+            {
+                int id = int.Parse(filaSeleccionada.Cells["Id"].Value.ToString());
+
+                UtilsBD.EliminarPelicula(id);
+
+            } else MessageBox.Show("No se ha seleccionado ninguna fila.");
+        }
     }
 }

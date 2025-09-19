@@ -59,8 +59,7 @@ namespace ProjectoNuevo
                 cmd.Parameters.AddWithValue("@usuario", nombreUsuario);
                 cmd.Parameters.AddWithValue("@idRol", data.Tag.ToString());
 
-                cmd.ExecuteNonQuery();
-                
+                cmd.ExecuteNonQuery();             
             }
         }
 
@@ -175,6 +174,42 @@ namespace ProjectoNuevo
                     }
                 }
             }
+        }
+
+        public static void EliminarPelicula(int id) 
+        {
+            try
+            {
+                string query =
+                    "DELETE " +
+                    "FROM peliculas " +
+                    "WHERE id_pelicula = @idPeli";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, Conexion.GetConnection()))
+                {
+                    cmd.Parameters.AddWithValue("@idPeli", id);
+               
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        MessageBox.Show("Película eliminada con éxito", "Eliminación Exitosa",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+
+                        peliculasCargadas.Clear();
+                        CargarPeliculas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo eliminar!", "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                    }
+
+                }
+            }
+            catch (Exception e) { }
         }
 
         public static void ActualizarPelicula(Pelicula actualizarPelicula) 

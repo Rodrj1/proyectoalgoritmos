@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ProjectoNuevo
 {
-    public class Pelicula
+    public class Pelicula: Media
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public DateTime FechaEstreno {  get; set; }
-        public string Descripcion { get; set; }
-        public string Director {  get; set; }
-        public Image Imagen { get; set; }
+        public override int Id { get; set; }
+        public override string Nombre { get; set; }
+        public override DateTime FechaEstreno {  get; set; }
+        public override string Descripcion { get; set; }
+        public override string Director {  get; set; }
+        public override Image Imagen { get; set; }
         public string Duracion { get; set; }
 
         public Pelicula() { }

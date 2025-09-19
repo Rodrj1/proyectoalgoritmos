@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PanelMain = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.PanelDescripcion = new System.Windows.Forms.Panel();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
@@ -44,17 +49,13 @@
             this.PanelUsuario = new System.Windows.Forms.Panel();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.DataGridPeliculas = new System.Windows.Forms.DataGridView();
+            this.CtxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CtxMenuSubModificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.CtxMenuSubEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.BtnBuscarPelicula = new System.Windows.Forms.Button();
             this.PanelBuscarPeliculaNombre = new System.Windows.Forms.Panel();
             this.TxtBuscarNombrePelicula = new System.Windows.Forms.TextBox();
-            this.CtxMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CtxMenuSubModificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.PanelMain.SuspendLayout();
             this.PanelDescripcion.SuspendLayout();
             this.PanelImagen.SuspendLayout();
@@ -64,8 +65,8 @@
             this.PanelFecha.SuspendLayout();
             this.PanelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPeliculas)).BeginInit();
-            this.PanelBuscarPeliculaNombre.SuspendLayout();
             this.CtxMenu.SuspendLayout();
+            this.PanelBuscarPeliculaNombre.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMain
@@ -91,6 +92,71 @@
             this.PanelMain.Name = "PanelMain";
             this.PanelMain.Size = new System.Drawing.Size(935, 574);
             this.PanelMain.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Enabled = false;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(542, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Descripción";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Enabled = false;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(31, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Duración";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(31, 325);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "Director";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Enabled = false;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(31, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Fecha de estreno";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Título";
             // 
             // BtnActualizar
             // 
@@ -246,6 +312,28 @@
             this.DataGridPeliculas.TabIndex = 47;
             this.DataGridPeliculas.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridPeliculas_CellMouseDown);
             // 
+            // CtxMenu
+            // 
+            this.CtxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CtxMenuSubModificar,
+            this.CtxMenuSubEliminar});
+            this.CtxMenu.Name = "CtxMenu";
+            this.CtxMenu.Size = new System.Drawing.Size(181, 70);
+            // 
+            // CtxMenuSubModificar
+            // 
+            this.CtxMenuSubModificar.Name = "CtxMenuSubModificar";
+            this.CtxMenuSubModificar.Size = new System.Drawing.Size(180, 22);
+            this.CtxMenuSubModificar.Text = "Modificar datos";
+            this.CtxMenuSubModificar.Click += new System.EventHandler(this.CtxMenuSubModificar_Click);
+            // 
+            // CtxMenuSubEliminar
+            // 
+            this.CtxMenuSubEliminar.Name = "CtxMenuSubEliminar";
+            this.CtxMenuSubEliminar.Size = new System.Drawing.Size(180, 22);
+            this.CtxMenuSubEliminar.Text = "Eliminar";
+            this.CtxMenuSubEliminar.Click += new System.EventHandler(this.CtxMenuSubEliminar_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -296,85 +384,6 @@
             this.TxtBuscarNombrePelicula.Size = new System.Drawing.Size(195, 22);
             this.TxtBuscarNombrePelicula.TabIndex = 12;
             // 
-            // CtxMenu
-            // 
-            this.CtxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CtxMenuSubModificar});
-            this.CtxMenu.Name = "CtxMenu";
-            this.CtxMenu.Size = new System.Drawing.Size(158, 26);
-            // 
-            // CtxMenuSubModificar
-            // 
-            this.CtxMenuSubModificar.Name = "CtxMenuSubModificar";
-            this.CtxMenuSubModificar.Size = new System.Drawing.Size(180, 22);
-            this.CtxMenuSubModificar.Text = "Modificar datos";
-            this.CtxMenuSubModificar.Click += new System.EventHandler(this.CtxMenuSubModificar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Título";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Enabled = false;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 261);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Fecha de estreno";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Enabled = false;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(31, 325);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Director";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(31, 382);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "Duración";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Enabled = false;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(542, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Descripción";
-            // 
             // ControlGestionPeliculasActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,9 +406,9 @@
             this.PanelUsuario.ResumeLayout(false);
             this.PanelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPeliculas)).EndInit();
+            this.CtxMenu.ResumeLayout(false);
             this.PanelBuscarPeliculaNombre.ResumeLayout(false);
             this.PanelBuscarPeliculaNombre.PerformLayout();
-            this.CtxMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,5 +441,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem CtxMenuSubEliminar;
     }
 }
